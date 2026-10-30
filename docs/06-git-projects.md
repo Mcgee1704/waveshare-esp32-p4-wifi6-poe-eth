@@ -1,25 +1,25 @@
-# Git-Projekte und Anwendungsbeispiele
+# Git projects and application examples
 
-Stand: 30.10.2026. Die folgenden sieben Originalrepositories wurden gelesen beziehungsweise über ihre Metadaten abgeglichen. Commitstände sind in [repositories.json](../sources/repositories.json) festgehalten. Eine Verlinkung ist kein Kompatibilitäts- oder Abnahmetest.
+Updated 2026-10-30. The following seven original repositories were read or checked through their metadata. Commit identifiers are recorded in [repositories.json](../sources/repositories.json). A link does not establish compatibility or qualification.
 
-| Projekt / geprüfter Stand | Zweck | Grenze |
+| Project / reviewed commit | Purpose | Limit |
 | --- | --- | --- |
-| [waveshareteam/ESP32-P4-Platform](https://github.com/waveshareteam/ESP32-P4-Platform/tree/6f78fa810ec505048c1941e3d09cefc9f29129bd) · `6f78fa81` | Herstellerbeispiele und Board-/Revisionskonfiguration; Basistests, Ethernet, SD, Audio, MIPI und UI. | Nur passend konfigurierte Beispiele verwenden; einzelne Defaults setzen 16 MB Flash. |
-| [espressif/esp-idf](https://github.com/espressif/esp-idf/tree/735507283d5b2f9fb363a1901172dbd9e847945d) · `73550728` | SDK des vorhandenen Prüfstands; Ethernet-, Speicher- und Gerätetreiber. | v5.5.4 ist der hier belegte Prüfstand, keine Aussage über die neueste Version. |
-| [espressif/esp-hosted](https://github.com/espressif/esp-hosted/tree/a0422923d01fa5cd5f4987885fe743656398b7c5) · `a0422923` | Übersichtsrepository der Hosted-Familie. | Aktive MCU-Implementierung inzwischen in esp-hosted-mcu; Lizenzdateien der verwendeten Teile prüfen. |
-| [espressif/esp-hosted-mcu](https://github.com/espressif/esp-hosted-mcu/tree/78b1c1c43c02b0c4e898cf87f94679278b1ddaff) · `78b1c1c4` | Funkanbindung eines MCU-Hosts über einen Espressif-Coprozessor. | Host und C6 müssen zueinander passen; eigene Funkprüfung fehlt. Lizenzdateien der konkreten Komponenten prüfen. |
-| [espkvm/espkvm](https://github.com/espkvm/espkvm/tree/39273c3db6fc2d02dacf596d635938c666af836c) · `39273c3d` | IP-KVM-Anwendungsbeispiel; vom Hersteller für dieses Board verlinkt. | Zusätzliche HDMI-CSI-Hardware; revisionsgerechter Build und eigene elektrische Prüfung erforderlich. Hier nicht installiert. |
-| [jrowny/p4kvm](https://github.com/jrowny/p4kvm/tree/18e0b85735d9569d4264fe4d5b58f6659c148680) · `18e0b857` | Früher Ethernet-KVM-Prototyp mit TC358743 für P4 vor Revision 3. | README nennt fehlenden Schutz und POC-Status; hier keine Betriebsfreigabe. Lizenzdateien vor Übernahme prüfen. |
-| [Mcgee1704/esp32-p4-llm-cluster-research](https://github.com/Mcgee1704/esp32-p4-llm-cluster-research/tree/0675f8687b9459fafa4545587ef14aedd118187d) · `0675f868` | Eigene veröffentlichte Experimente zu P4-Speicher, Ethernet und verteilter Textinferenz. | Funktionsnachweis für den dokumentierten Aufbau; keine komplette Boardabnahme. Gemischte Herkunft: LICENSE und THIRD_PARTY beachten. |
+| [waveshareteam/ESP32-P4-Platform](https://github.com/waveshareteam/ESP32-P4-Platform/tree/6f78fa810ec505048c1941e3d09cefc9f29129bd) · `6f78fa81` | Manufacturer examples and board/revision configuration: baseline checks, Ethernet, SD, audio, MIPI and UI. | Use a matching configuration; some examples default to 16-MB flash. |
+| [espressif/esp-idf](https://github.com/espressif/esp-idf/tree/735507283d5b2f9fb363a1901172dbd9e847945d) · `73550728` | SDK used in the existing test setup; Ethernet, memory and device drivers. | v5.5.4 is the documented test version, not a claim about the latest release. |
+| [espressif/esp-hosted](https://github.com/espressif/esp-hosted/tree/a0422923d01fa5cd5f4987885fe743656398b7c5) · `a0422923` | Overview repository for the Hosted family. | Active MCU implementation is now in esp-hosted-mcu; check license files for the parts used. |
+| [espressif/esp-hosted-mcu](https://github.com/espressif/esp-hosted-mcu/tree/78b1c1c43c02b0c4e898cf87f94679278b1ddaff) · `78b1c1c4` | Wireless connectivity for an MCU host through an Espressif coprocessor. | Host and C6 firmware must match; owner wireless testing remains open. Check component licenses. |
+| [espkvm/espkvm](https://github.com/espkvm/espkvm/tree/39273c3db6fc2d02dacf596d635938c666af836c) · `39273c3d` | IP-KVM example linked by the manufacturer for this board. | Requires extra HDMI-to-CSI hardware, a revision-appropriate build and electrical review. Not installed here. |
+| [jrowny/p4kvm](https://github.com/jrowny/p4kvm/tree/18e0b85735d9569d4264fe4d5b58f6659c148680) · `18e0b857` | Early Ethernet KVM proof of concept with TC358743 for pre-revision-3 P4 chips. | README identifies missing security and proof-of-concept status; no operating qualification here. Check licenses before reuse. |
+| [Mcgee1704/esp32-p4-llm-cluster-research](https://github.com/Mcgee1704/esp32-p4-llm-cluster-research/tree/0675f8687b9459fafa4545587ef14aedd118187d) · `0675f868` | Published owner experiments on P4 memory, Ethernet and distributed text inference. | Evidence for the documented setup, not complete board qualification. Mixed provenance: consult LICENSE and THIRD_PARTY. |
 
-## Auswahl für Folgeprojekte
+## Choosing a starting point
 
-Für die erste Peripherieprüfung bieten sich die Herstellerbeispiele an; das Boardprofil und die Siliziumrevision müssen zuvor feststehen. Der vorhandene eigene P4-Prüfstand belegt IDF 5.5.4, 32 MiB Flash, 32 MiB PSRAM und den IP101-Ethernetpfad. Die Funkerweiterung ist ein eigenes Paket mit passender C6-Firmware. KVM, Kamera, Display und Audio benötigen jeweils zusätzliche Prüfungen.
+Manufacturer examples provide starting points for peripheral checks after the board profile and silicon revision are known. Existing owner tests establish IDF 5.5.4, 32 MiB flash, 32 MiB PSRAM and an operational IP101 Ethernet path. Wireless work needs matching C6 firmware. KVM, camera, display and audio each need their own verification.
 
-Die Waveshare-Dokumentation ordnet die Beispiele nach Basistest, Schnittstelle und Anwendung. In diesem Repository werden keine fremden Beispiele oder Binärimages kopiert. Die offiziellen [Ressourcen](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH/Resources-And-Documents) und [ESP-IDF-Hinweise](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH/ESP-IDF) sind der Einstieg.
+Waveshare groups examples by baseline checks, interface and application. This repository does not copy third-party examples or binary images. Start with the official [resources](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH/Resources-And-Documents) and [ESP-IDF guidance](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH/ESP-IDF).
 
-## Lizenzen und Nachweisgrenzen
+## Licenses and evidence limits
 
-Die GitHub-Lizenzkennung `NOASSERTION` bedeutet, dass die API keine eindeutige SPDX-Gesamtlizenz ausweist. Sie bedeutet weder gemeinfrei noch automatisch unlizenziert. Vor Codeübernahme die konkreten LICENSE-Dateien, Dateiköpfe, Unterkomponenten und Drittanbieterhinweise prüfen. Das Forschungsrepository enthält mehrere Herkunfts- und Lizenzbereiche.
+GitHub's `NOASSERTION` license identifier means the API does not provide one unambiguous SPDX repository-wide license. It implies neither public domain nor necessarily absent licensing. Review specific LICENSE files, file headers, subcomponents and third-party notices before reusing code. The research repository contains multiple provenance/license areas.
 
-Keines dieser Projekte wurde im Rahmen der Katalogaufnahme installiert, gebaut, geflasht oder im Netzwerk bereitgestellt. Historische eigene Funktionsnachweise stehen unter [Eigene Boards](05-own-boards.md).
+None of these projects was installed, built, flashed or served on a network as part of this catalog task or English translation. Historical owner findings are described in [Owner boards](05-own-boards.md).

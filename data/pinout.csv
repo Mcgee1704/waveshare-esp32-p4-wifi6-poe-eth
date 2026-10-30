@@ -2,60 +2,60 @@ connector,pin,signal,p4_gpio,source_id,scope,note
 P6,1,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 P6,2,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 P6,3,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,4,GPIO7,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: Codec/H1/DSI/CSI; P6
+P6,4,GPIO7,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: codec/H1/DSI/CSI; P6
 P6,5,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,6,GPIO8,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: Codec/H1/DSI/CSI; P6
-P6,7,GPIO37,37,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 TX zu CH343/H2; Boot-Strapping; P6
-P6,8,GPIO23,23,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,9,GPIO38,38,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 RX von CH343/H2; Boot-Strapping; P6
+P6,6,GPIO8,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: codec/H1/DSI/CSI; P6
+P6,7,GPIO37,37,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 TX to CH343/H2; boot strapping; P6
+P6,8,GPIO23,23,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,9,GPIO38,38,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 RX from CH343/H2; boot strapping; P6
 P6,10,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,11,GPIO22,22,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,12,GPIO21,21,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
+P6,11,GPIO22,22,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,12,GPIO21,21,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
 P6,13,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,14,GPIO20,20,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,15,GPIO5,5,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,16,GPIO6,6,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6_IO2 über R52; P6
-P6,17,GPIO4,4,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
+P6,14,GPIO20,20,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,15,GPIO5,5,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,16,GPIO6,6,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6_IO2 through R52; P6
+P6,17,GPIO4,4,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
 P6,18,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 P6,19,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,20,GPIO3,3,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,21,GPIO1,1,WS-SCHEMATIC,schematic_numbering_not_physical_verification,"Y2 32,768-kHz-Quarzpfad; P6"
-P6,22,GPIO2,2,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,23,GPIO36,36,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Boot-Strapping; P6
-P6,24,GPIO0,0,WS-SCHEMATIC,schematic_numbering_not_physical_verification,"Y2 32,768-kHz-Quarzpfad; P6"
-P6,25,GPIO32,32,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
+P6,20,GPIO3,3,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,21,GPIO1,1,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Y2 32.768-kHz crystal path; P6
+P6,22,GPIO2,2,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,23,GPIO36,36,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Boot strapping; P6
+P6,24,GPIO0,0,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Y2 32.768-kHz crystal path; P6
+P6,25,GPIO32,32,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
 P6,26,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,27,GPIO25,25,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,28,GPIO24,24,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
+P6,27,GPIO25,25,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,28,GPIO24,24,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
 P6,29,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,30,GPIO33,33,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,31,GPIO54,54,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6_CHIP_PU über R54; P6
-P6,32,GPIO26,26,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
+P6,30,GPIO33,33,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,31,GPIO54,54,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6_CHIP_PU through R54; P6
+P6,32,GPIO26,26,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
 P6,33,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-P6,34,GPIO48,48,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,35,GPIO46,46,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,36,GPIO53,53,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Verstärker PA_CTRL; P6
-P6,37,GPIO27,27,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,38,GPIO47,47,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen
-P6,39,GPIO45,45,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Steuerung SD-Versorgung Q1; P6
+P6,34,GPIO48,48,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,35,GPIO46,46,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,36,GPIO53,53,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Amplifier PA_CTRL; P6
+P6,37,GPIO27,27,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,38,GPIO47,47,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
+P6,39,GPIO45,45,WS-SCHEMATIC,schematic_numbering_not_physical_verification,SD supply control Q1; P6
 P6,40,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-H1,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Versorgung über H5 wählbar; Stellung am Exemplar unbekannt; keine Pegelwandlung
+H1,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selected through H5; owner-board position unknown; no logic-level conversion
 H1,2,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-H1,3,GPIO7,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: Codec/H1/DSI/CSI; P6
-H1,4,GPIO8,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: Codec/H1/DSI/CSI; P6
-H2,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Versorgung über H5 wählbar; Stellung am Exemplar unbekannt; keine Pegelwandlung
+H1,3,GPIO7,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: codec/H1/DSI/CSI; P6
+H1,4,GPIO8,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: codec/H1/DSI/CSI; P6
+H2,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selected through H5; owner-board position unknown; no logic-level conversion
 H2,2,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-H2,3,GPIO38,38,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 RX von CH343/H2; Boot-Strapping; P6
-H2,4,GPIO37,37,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 TX zu CH343/H2; Boot-Strapping; P6
-H4,1,PA_OUTL-,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Differenzieller Verstärkerausgang; nicht an GND legen
-H4,2,PA_OUTL+,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Differenzieller Verstärkerausgang; nicht an GND legen
-H5,1,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Spannungswahl für H1/H2; Bestückung/Stellung unbekannt
-H5,2,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Spannungswahl für H1/H2; Bestückung/Stellung unbekannt
-H5,3,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Spannungswahl für H1/H2; Bestückung/Stellung unbekannt
-H7,1,C6_U0TXD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6-Anschluss; keine P4-GPIO-Nummer
-H7,2,C6_U0RXD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6-Anschluss; keine P4-GPIO-Nummer
-H7,3,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6-Anschluss; keine P4-GPIO-Nummer
-H7,4,C6_IO9,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6-Anschluss; keine P4-GPIO-Nummer
+H2,3,GPIO38,38,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 RX from CH343/H2; boot strapping; P6
+H2,4,GPIO37,37,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 TX to CH343/H2; boot strapping; P6
+H4,1,PA_OUTL-,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Differential amplifier output; do not connect to GND
+H4,2,PA_OUTL+,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Differential amplifier output; do not connect to GND
+H5,1,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; assembly/position unknown
+H5,2,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; assembly/position unknown
+H5,3,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; assembly/position unknown
+H7,1,C6_U0TXD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6 connector; not a P4 GPIO number
+H7,2,C6_U0RXD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6 connector; not a P4 GPIO number
+H7,3,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6 connector; not a P4 GPIO number
+H7,4,C6_IO9,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6 connector; not a P4 GPIO number
 J6,1,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J6,2,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J1,1,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
@@ -68,8 +68,8 @@ J1,7,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J1,8,DSI_D0_N,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J1,9,DSI_D0_P,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J1,10,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-J1,11,ESP_I2C_SCL,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: Codec/H1/DSI/CSI; P6
-J1,12,ESP_I2C_SDA,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: Codec/H1/DSI/CSI; P6
+J1,11,ESP_I2C_SCL,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: codec/H1/DSI/CSI; P6
+J1,12,ESP_I2C_SDA,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: codec/H1/DSI/CSI; P6
 J1,13,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J1,14,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J1,15,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
@@ -83,13 +83,13 @@ J3,7,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J3,8,CSI_CLK_N,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J3,9,CSI_CLK_P,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 J3,10,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-J3,11,CSI_IO0,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,R46 10 kOhm nach ESP_3V3 im Plan; kein freier P4-GPIO
-J3,12,CSI_IO1,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,R47 als NC nach ESP_3V3 im Plan; kein freier P4-GPIO
-J3,13,ESP_I2C_SCL,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: Codec/H1/DSI/CSI; P6
-J3,14,ESP_I2C_SDA,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: Codec/H1/DSI/CSI; P6
+J3,11,CSI_IO0,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,R46 10 kOhm to ESP_3V3 in schematic; not an unassigned P4 GPIO
+J3,12,CSI_IO1,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,R47 shown as NC towards ESP_3V3; not an unassigned P4 GPIO
+J3,13,ESP_I2C_SCL,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: codec/H1/DSI/CSI; P6
+J3,14,ESP_I2C_SDA,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: codec/H1/DSI/CSI; P6
 J3,15,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-PoE,1,VDD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Interner Modulanschluss; keine Freigabe für Fremdeinspeisung
-PoE,2,VSS,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Interner Modulanschluss; keine Freigabe für Fremdeinspeisung
-PoE,3,PGND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Interner Modulanschluss; keine Freigabe für Fremdeinspeisung
-PoE,4,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Interner Modulanschluss; keine Freigabe für Fremdeinspeisung
-PoE,5,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Interner Modulanschluss; keine Freigabe für Fremdeinspeisung
+PoE,1,VDD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Internal module connector; not approval for external power injection
+PoE,2,VSS,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Internal module connector; not approval for external power injection
+PoE,3,PGND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Internal module connector; not approval for external power injection
+PoE,4,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Internal module connector; not approval for external power injection
+PoE,5,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Internal module connector; not approval for external power injection

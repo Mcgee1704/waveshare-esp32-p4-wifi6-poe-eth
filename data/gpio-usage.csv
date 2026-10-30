@@ -1,56 +1,56 @@
 p4_gpio,on_p6,function_or_conflict,source_id
-0,true,"Y2 32,768-kHz-Quarzpfad; P6",WS-SCHEMATIC;ESP-P4-DS
-1,true,"Y2 32,768-kHz-Quarzpfad; P6",WS-SCHEMATIC;ESP-P4-DS
-2,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-3,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-4,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-5,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-6,true,C6_IO2 über R52; P6,WS-SCHEMATIC;ESP-P4-DS
-7,true,I2C SDA: Codec/H1/DSI/CSI; P6,WS-SCHEMATIC;ESP-P4-DS
-8,true,I2C SCL: Codec/H1/DSI/CSI; P6,WS-SCHEMATIC;ESP-P4-DS
-9,false,I2S DSDIN zum Codec,WS-SCHEMATIC;ESP-P4-DS
+0,true,Y2 32.768-kHz crystal path; P6,WS-SCHEMATIC;ESP-P4-DS
+1,true,Y2 32.768-kHz crystal path; P6,WS-SCHEMATIC;ESP-P4-DS
+2,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+3,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+4,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+5,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+6,true,C6_IO2 through R52; P6,WS-SCHEMATIC;ESP-P4-DS
+7,true,I2C SDA: codec/H1/DSI/CSI; P6,WS-SCHEMATIC;ESP-P4-DS
+8,true,I2C SCL: codec/H1/DSI/CSI; P6,WS-SCHEMATIC;ESP-P4-DS
+9,false,I2S DSDIN to codec,WS-SCHEMATIC;ESP-P4-DS
 10,false,I2S LRCK,WS-SCHEMATIC;ESP-P4-DS
-11,false,I2S ASDOUT vom Codec,WS-SCHEMATIC;ESP-P4-DS
+11,false,I2S ASDOUT from codec,WS-SCHEMATIC;ESP-P4-DS
 12,false,I2S BCLK/SCLK,WS-SCHEMATIC;ESP-P4-DS
 13,false,I2S MCLK,WS-SCHEMATIC;ESP-P4-DS
-14,false,SDIO-Verbindung zu C6_IO20,WS-SCHEMATIC;ESP-P4-DS
-15,false,SDIO-Verbindung zu C6_IO21,WS-SCHEMATIC;ESP-P4-DS
-16,false,SDIO-Verbindung zu C6_IO22,WS-SCHEMATIC;ESP-P4-DS
-17,false,SDIO-Verbindung zu C6_IO23,WS-SCHEMATIC;ESP-P4-DS
-18,false,SDIO-Verbindung zu C6_IO18,WS-SCHEMATIC;ESP-P4-DS
-19,false,SDIO-Verbindung zu C6_IO19,WS-SCHEMATIC;ESP-P4-DS
-20,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-21,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-22,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-23,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-24,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-25,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-26,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-27,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
+14,false,SDIO connection to C6_IO20,WS-SCHEMATIC;ESP-P4-DS
+15,false,SDIO connection to C6_IO21,WS-SCHEMATIC;ESP-P4-DS
+16,false,SDIO connection to C6_IO22,WS-SCHEMATIC;ESP-P4-DS
+17,false,SDIO connection to C6_IO23,WS-SCHEMATIC;ESP-P4-DS
+18,false,SDIO connection to C6_IO18,WS-SCHEMATIC;ESP-P4-DS
+19,false,SDIO connection to C6_IO19,WS-SCHEMATIC;ESP-P4-DS
+20,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+21,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+22,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+23,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+24,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+25,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+26,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+27,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
 28,false,Ethernet CRS_DV,WS-SCHEMATIC;ESP-P4-DS
 29,false,Ethernet RXD0,WS-SCHEMATIC;ESP-P4-DS
 30,false,Ethernet RXD1,WS-SCHEMATIC;ESP-P4-DS
 31,false,Ethernet MDC,WS-SCHEMATIC;ESP-P4-DS
-32,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-33,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-34,false,Ethernet TXD0; JTAG-Strapping,WS-SCHEMATIC;ESP-P4-DS
-35,false,Ethernet TXD1; BOOT; Boot-Strapping,WS-SCHEMATIC;ESP-P4-DS
-36,true,Boot-Strapping; P6,WS-SCHEMATIC;ESP-P4-DS
-37,true,UART0 TX zu CH343/H2; Boot-Strapping; P6,WS-SCHEMATIC;ESP-P4-DS
-38,true,UART0 RX von CH343/H2; Boot-Strapping; P6,WS-SCHEMATIC;ESP-P4-DS
+32,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+33,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+34,false,Ethernet TXD0; JTAG strapping,WS-SCHEMATIC;ESP-P4-DS
+35,false,Ethernet TXD1; BOOT; boot strapping,WS-SCHEMATIC;ESP-P4-DS
+36,true,Boot strapping; P6,WS-SCHEMATIC;ESP-P4-DS
+37,true,UART0 TX to CH343/H2; boot strapping; P6,WS-SCHEMATIC;ESP-P4-DS
+38,true,UART0 RX from CH343/H2; boot strapping; P6,WS-SCHEMATIC;ESP-P4-DS
 39,false,SD DAT0,WS-SCHEMATIC;ESP-P4-DS
 40,false,SD DAT1,WS-SCHEMATIC;ESP-P4-DS
 41,false,SD DAT2,WS-SCHEMATIC;ESP-P4-DS
 42,false,SD DAT3,WS-SCHEMATIC;ESP-P4-DS
 43,false,SD CLK,WS-SCHEMATIC;ESP-P4-DS
 44,false,SD CMD,WS-SCHEMATIC;ESP-P4-DS
-45,true,Steuerung SD-Versorgung Q1; P6,WS-SCHEMATIC;ESP-P4-DS
-46,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-47,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
-48,true,P6; im geprüften Plan kein zusätzlicher Peripheriepfad zugeordnet; Funktion/Bootverhalten projektbezogen prüfen,WS-SCHEMATIC;ESP-P4-DS
+45,true,SD supply control Q1; P6,WS-SCHEMATIC;ESP-P4-DS
+46,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+47,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
+48,true,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project,WS-SCHEMATIC;ESP-P4-DS
 49,false,Ethernet TX_EN,WS-SCHEMATIC;ESP-P4-DS
 50,false,Ethernet RMII REF_CLK,WS-SCHEMATIC;ESP-P4-DS
 51,false,Ethernet PHY RESET,WS-SCHEMATIC;ESP-P4-DS
 52,false,Ethernet MDIO,WS-SCHEMATIC;ESP-P4-DS
-53,true,Verstärker PA_CTRL; P6,WS-SCHEMATIC;ESP-P4-DS
-54,true,C6_CHIP_PU über R54; P6,WS-SCHEMATIC;ESP-P4-DS
+53,true,Amplifier PA_CTRL; P6,WS-SCHEMATIC;ESP-P4-DS
+54,true,C6_CHIP_PU through R54; P6,WS-SCHEMATIC;ESP-P4-DS

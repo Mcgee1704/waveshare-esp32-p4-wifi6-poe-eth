@@ -1,43 +1,43 @@
-# Versorgung und elektrische Grenzen
+# Power and electrical limits
 
-Stand: 30.10.2026. Grundlage: [Schaltplan](https://files.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH/ESP32-P4-WIFI6-POE-ETH-Schematic.pdf), [aktuelle Hersteller-FAQ](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH/FAQ) und vorhandene lokale Untersuchung. Die folgende Zuordnung ist eine Schaltplanauswertung; die Bestückung der eigenen Boards wurde noch nicht vollständig abgeglichen.
+Updated 2026-10-30. Based on the [schematic](https://files.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH/ESP32-P4-WIFI6-POE-ETH-Schematic.pdf), [manufacturer FAQ](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH/FAQ) and existing local review. These findings describe the schematic; the owner-board assembly has not been fully matched to it.
 
-## Versorgungspfade
+## Supply paths
 
-| Pfad | Schaltplanbefund | Grenze |
+| Path | Schematic finding | Limit |
 | --- | --- | --- |
-| USB-C | `Type_C_5V` über Q2 AO3401 und Ansteuerung U13 MMDT3906DW nach `VCC_5V` | Gesteuerter Pfad; kein gemessener Nachweis aller Rückstromfälle |
-| USB-A | `VCC_5V` über U2 DIO7003HEST5 nach `VBUS_OUT`; R12 parallel als NC/0R eingezeichnet | Tatsächliche R12-Bestückung und Ausgangsstromgrenze offen |
-| PoE | RJ45-Mittelabgriffe / Versorgungspaare über BD1/BD2 zum separaten Modul, dessen Ausgang `VCC_5V` speist | Norm, Eingangsspannungsbereich, Leistung, Isolation und Modulrevision nicht aus diesem Basisplan vollständig belegt |
-| 3,3 V | U3 MP1658GTF-Z, Planbeschriftung „3A MAX“ | Kein 3-A-Budget für USB-A oder den Erweiterungsheader |
-| P4-Kern | U4 MP1605GTF-Z und P4-interne Versorgungsregler | Nicht mit frei belastbaren Erweiterungsausgängen verwechseln |
-| Audio | U9 RT9193-33PB erzeugt A3V3 | Kein allgemeiner Peripherie-Stromausgang |
-| J6 | Pin 1 GND, Pin 2 VCC_5V | Hersteller bezeichnet den Anschluss als 5-V-Versorgung; Polarität und Einspeisekombination vorher prüfen |
+| USB-C | `Type_C_5V` to `VCC_5V` through Q2 AO3401, controlled by U13 MMDT3906DW | Controlled path; reverse-current behaviour not measured for every supply state |
+| USB-A | `VCC_5V` through U2 DIO7003HEST5 to `VBUS_OUT`; R12 shown as parallel NC/0R | Actual R12 population and output-current limit unresolved |
+| PoE | RJ45 centre taps / supply pairs through BD1/BD2 to a separate module; module output feeds `VCC_5V` | Standard, input range, power, isolation and module revision not fully established by this baseboard schematic |
+| 3.3 V | U3 MP1658GTF-Z, marked “3A MAX” in the plan | Not a 3-A USB-A or expansion-header allowance |
+| P4 core | U4 MP1605GTF-Z and P4 internal regulators | Not general-purpose expansion supply outputs |
+| Audio | U9 RT9193-33PB generates A3V3 | Not a general peripheral supply |
+| J6 | Pin 1 GND, pin 2 VCC_5V | Manufacturer identifies this as a 5-V supply connector; check polarity and the proposed supply combination |
 
-Eine passive PoE-Spannung oder ein beliebiges PoE-Modul wird damit nicht freigegeben. Der Basisschaltplan zeigt keine vollständige interne PoE-Wandlerschaltung. Auch eine Schutzklasse oder zertifizierte Isolationsspannung wird hier nicht behauptet.
+This does not establish suitability for passive PoE or an arbitrary replacement module. The baseboard schematic omits the module's full internal converter circuit. No protection class or certified system isolation voltage is established here.
 
-## USB-C und PoE gleichzeitig
+## USB-C and PoE together
 
-Die am 30.10.2026 abgerufene Hersteller-FAQ beantwortet die gleichzeitige Versorgung über **USB Type-C und PoE positiv**. Diese Aussage wird als Herstellerangabe aufgenommen. Sie ist kein eigener Belastungs- oder Rückstromtest und sagt nichts Konkretes über eine Kette mehrerer Boards aus.
+The manufacturer FAQ retrieved on 2026-10-30 explicitly permits simultaneous **USB Type-C and PoE power**. This is a manufacturer statement. It does not provide owner measurements of load sharing or reverse current, or a defined power budget for a chain of boards.
 
-Die vorhandenen eigenen Funktionstests verwendeten USB-C vom Rechner sowie LAN ohne PoE. Eine vorgesehene Verbindung USB-A von Board A zu USB-C von Board B wurde elektrisch noch nicht abgenommen. Das Weiterlaufen eines Boards über USB bei abgeschaltetem PoE ist dabei erwartbares und akzeptiertes Verhalten. Zum vollständigen Abschalten müssen alle versorgenden Verbindungen getrennt sein.
+Existing owner tests used USB-C from a computer and Ethernet without PoE. The proposed USB-A-to-USB-C connection between neighbouring boards has not been electrically qualified. Continued operation from a neighbour's USB supply when PoE is removed is accepted behaviour for that proposed setup. Disconnect all supplying paths to fully power a board down.
 
-Offen sind insbesondere Stromrichtung, maximale USB-A-Last, Lastaufteilung, Spannungsabfälle, Erwärmung und Verhalten beim Wegfall einzelner Quellen. LED-Licht oder ein erfolgreicher Boot reichen dafür nicht als Messnachweis.
+Current direction, maximum USB-A load, load sharing, voltage drop, temperature and source-loss transitions remain unmeasured. An illuminated LED or successful boot cannot establish these limits.
 
-## H5 und Logikpegel
+## H5 and logic levels
 
-H5 führt laut Plan Pin 1 = `ESP_3V3`, Pin 2 = `OUT_LE`, Pin 3 = `VCC_5V`. `OUT_LE` liegt jeweils an Pin 1 von H1 und H2. Die tatsächliche Brücke/Bestückung ist nicht erfasst. Deshalb die Ausgangsspannung vor dem Anschluss eines Sensors oder UART-Adapters feststellen; nicht aus Steckerform oder Kabelfarbe ableiten.
+H5 is shown as pin 1 = `ESP_3V3`, pin 2 = `OUT_LE`, pin 3 = `VCC_5V`. `OUT_LE` feeds pin 1 of both H1 and H2. The physical bridge/assembly position has not been recorded. Establish the selected voltage before attaching a sensor or UART adapter; connector shape and wire colour do not establish it.
 
-Die Auswahl der Versorgungsleitung verändert **nicht** die Logikpegel von GPIO7/8 oder GPIO37/38. Diese sind im Board als 3,3-V-Signale ausgeführt. Keine 5-V-Signale an GPIOs anlegen. Pegelwandler und gemeinsame Masse bei Bedarf passend vorsehen; Rückspeisung über Signalleitungen bei ausgeschaltetem Board vermeiden.
+Selecting this supply does **not** change the logic levels of GPIO7/8 or GPIO37/38. They are 3.3-V board signals. Keep 5-V signals away from GPIO inputs. Use appropriate level shifting and a common reference where required, and prevent signal-line back-powering of an unpowered board.
 
-GPIO0/1 liegen außerdem am 32-kHz-Quarzpfad; GPIO36/37/38 gehören zu den Boot-Strapping-Signalen des P4. Die [GPIO-Konflikte](02-pinout.md) vor einer Zusatzbeschaltung prüfen.
+GPIO0/1 are also connected to the 32-kHz crystal path; GPIO36/37/38 are P4 boot-strapping signals. Review the [GPIO conflicts](02-pinout.md) before adding loads.
 
-## Lautsprecher und MIPI
+## Speaker and MIPI
 
-H4 führt zwei Verstärkerausgänge `PA_OUTL-` und `PA_OUTL+`. Keiner ist ein Masseanschluss. Den Lautsprecher zwischen den beiden vorgesehenen Ausgängen anschließen; keinen Ausgang mit GND kurzschließen. Die Herstellerangabe 8 Ω / 2 W ist kein gemessener Ausgangsleistungsnachweis dieser Erfassung.
+H4 carries amplifier outputs `PA_OUTL-` and `PA_OUTL+`; neither is ground. Connect the speaker between the intended outputs and do not short either output to GND. The manufacturer's 8 Ω / 2 W description is not a measured output-power result from this documentation task.
 
-MIPI-Stecker sind keine universellen GPIO-Stecker. Kontaktseite, Lane-Belegung, Versorgung und Display-/Kameramodell müssen zusammenpassen. Verbindungen im stromlosen Zustand herstellen.
+MIPI connectors require matching contact orientation, lanes, supply and display/camera hardware. Make connections with the equipment powered down.
 
-## Abnahmestand für eine spätere Versorgungskette
+## Evidence required for a future power chain
 
-Erst Bestückung und Daten des tatsächlich eingesetzten PoE-Moduls erfassen. Danach pro Versorgungskombination Spannung, gerichteten Strom und Temperatur messen: einzelne Quelle, beide Quellen, ausgeschalteter Nachbar, vertauschte Boardrollen und realistische Last. Vorher zulässige Grenzwerte festlegen. Ein bestandener Zweieraufbau belegt keine größere Kette. Für diese Dokumentation wurde kein solcher Test ausgeführt.
+First identify the actual PoE module and populated power-path components. Establish their permissible limits before selecting a measurement method. Later measurements need supply voltage, current with identifiable direction, and temperature for each relevant combination: a single source, both sources, a powered/unpowered neighbour, swapped board roles and realistic load. A two-board result does not qualify a larger chain. No such measurements were performed for this documentation task. See the [evidence checklist](07-evidence-checklist.md).

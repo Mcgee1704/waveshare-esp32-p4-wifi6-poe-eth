@@ -1,60 +1,60 @@
 # Hardware
 
-Stand: 30.10.2026. Quellenkennungen werden im [Register](../sources/README.md) aufgelöst.
+Updated 2026-10-30. Source identifiers are resolved in the [register](../sources/README.md).
 
-## Identifikation und Revisionen
+## Identification and revisions
 
-| Merkmal | Belegter Stand | Quelle |
+| Item | Documented finding | Source |
 | --- | --- | --- |
-| Hersteller / Modell | Waveshare ESP32-P4-WIFI6-POE-ETH | WS-MODEL |
-| Verkaufspakete | Basic 32832, C 32833, D 32834; Zubehör der eigenen Exemplare nicht erfasst | WS-MODEL |
-| P4-Modul | ESP32-P4-Core; Schaltplan U7 ESP32-P4NRW32, aktuelle Produktbeschreibung ESP32-P4NRW32X | WS-SCHEMATIC, WS-MODEL |
-| Eigene Siliziumrevision | Beide P4s v1.3; nicht mit Platinenrevision gleichsetzen | OWN-20261029 |
-| Platinenrevision | Nicht am Exemplar festgestellt | OWN-20261029 |
-| C6 im Schaltplan | U1 ESP32-C6-MINI-1-N4 | WS-SCHEMATIC |
-| C6 in aktueller Produktbeschreibung | ESP32-C6-MINI-1U-H8, externe Antenne | WS-MODEL |
-| Eigener C6 / Antennenweg | Genaue Modulaufschrift und C6-Firmware nicht verifiziert | OWN-20261029 |
+| Manufacturer / model | Waveshare ESP32-P4-WIFI6-POE-ETH | WS-MODEL |
+| Sales kits | Basic 32832, C 32833, D 32834; owner accessories not established | WS-MODEL |
+| P4 module | ESP32-P4-Core; schematic U7 ESP32-P4NRW32, current product description ESP32-P4NRW32X | WS-SCHEMATIC, WS-MODEL |
+| Owner silicon revision | Both P4s v1.3; this is separate from PCB revision | OWN-20261029 |
+| PCB revision | Not identified on the physical boards | OWN-20261029 |
+| C6 in the schematic | U1 ESP32-C6-MINI-1-N4 | WS-SCHEMATIC |
+| C6 in the current product description | ESP32-C6-MINI-1U-H8, external antenna | WS-MODEL |
+| Owner C6 / antenna path | Exact module marking and C6 firmware not verified | OWN-20261029 |
 
-N4 und H8 dürfen nicht zu einer vermeintlich einheitlichen Bestückung zusammengeführt werden. Insbesondere werden weder C6-Flashgröße noch Antennenvariante der eigenen Boards aus der aktuellen Verkaufsseite abgeleitet.
+N4 and H8 must remain separate assembly descriptions. The current sales page does not identify the C6 flash size or antenna variant of the owner boards.
 
-## Rechen- und Speicheraufbau
+## Processing and memory
 
-| Baustein / Funktion | Angabe | Nachweisgrenze |
+| Component / function | Specification | Evidence limit |
 | --- | --- | --- |
-| HP-CPU | Zwei 32-Bit-RISC-V-Kerne; 360 MHz im dokumentierten Boardprofil | WS-MODEL, OWN-20261029 |
-| LP-CPU | Ein RISC-V-Kern, bis 40 MHz | ESP-P4-DS |
-| Interner Speicher | HP-ROM 128 KB, LP-ROM 16 KB, HP-L2MEM 768 KB, LP-SRAM 32 KB, SPM 8 KB | ESP-P4-DS; nicht komplett als freier Anwendungsspeicher verfügbar |
-| PSRAM | 32 MiB im P4-Package; bisherige Firmwarekonfiguration 200 MHz | OWN-20261029; Starttest, kein vollständiger Langzeit-Stresstest |
-| P4-Flash | 32 MiB SPI-NOR; U12 im Plan GD25Q256EYIGR | Größe ausgelesen, genaue Bauteilaufschrift am Exemplar offen |
-| P4-Quarze im Plan | Y1 40 MHz; Y2 32,768 kHz an GPIO0/1 | Schaltplanbestückung, nicht nachgemessen |
-| Ethernet-Quarz | Y3 25 MHz am IP101GRI | Schaltplan |
+| HP CPU | Two 32-bit RISC-V cores; 360 MHz in the documented board profile | WS-MODEL, OWN-20261029 |
+| LP CPU | One RISC-V core, up to 40 MHz | ESP-P4-DS |
+| Internal memory | HP ROM 128 KB, LP ROM 16 KB, HP L2MEM 768 KB, LP SRAM 32 KB, SPM 8 KB | ESP-P4-DS; not all available as free application memory |
+| PSRAM | 32 MiB in the P4 package; existing firmware configured for 200 MHz | OWN-20261029; startup test, no complete long-duration stress test |
+| P4 flash | 32 MiB SPI NOR; schematic U12 GD25Q256EYIGR | Capacity read out; exact component marking on the owner boards unresolved |
+| P4 crystals in the schematic | Y1 40 MHz; Y2 32.768 kHz on GPIO0/1 | Schematic assembly, not measured |
+| Ethernet crystal | Y3 25 MHz on IP101GRI | Schematic |
 
-Das aktuelle Chipdatenblatt ESP32-P4 v0.7 nennt bis 400 MHz und PSRAM-Takte bis 250 MHz. Diese Chipfamilienwerte ersetzen keine revisionsgerechte Boardkonfiguration. Die eigenen Messreihen verwenden 360/200 MHz; eine Umstellung wurde für diese Erfassung nicht vorgenommen.
+The current ESP32-P4 v0.7 datasheet lists up to 400 MHz CPU and 250 MHz PSRAM clocks. These family specifications do not replace a revision-appropriate board configuration. Existing owner experiments use 360/200 MHz; this documentation task did not change those settings.
 
-## Schnittstellen und Bauteile
+## Interfaces and components
 
-| Bereich | Aufbau laut Quellen |
+| Area | Documented implementation |
 | --- | --- |
-| Ethernet | U11 IP101GRI, RMII, 100-Mbit/s-RJ45 RJ1; kein Gigabit-Ethernet |
-| PoE | Zwei Eingangsbrücken BD1/BD2 und separater fünfpoliger PoE-Modulanschluss; Moduldetails siehe [Versorgung](03-power.md) |
-| Funk | ESP32-C6 über SDIO; Wi-Fi 6 und Bluetooth LE. Der P4 selbst besitzt kein WLAN-Funkteil |
-| USB-C | Versorgung und UART-Download/Debug über U5 CH343P; U6 EMH4T2R steuert Reset/Boot aus DTR/RTS |
-| USB-A | Nativer USB 2.0 HS OTG des P4; `USBD_N/P` sind dedizierte Signale |
-| SD | MicroSD/TF SD1; Datenbus GPIO39–44, Versorgungsschalter Q1 mit GPIO45 |
-| Anzeige | J1, 15 Kontakte, zwei MIPI-DSI-Datenlanes und Taktlane; passende Panelparameter und Strombedarf erforderlich |
-| Kamera | J3, 15 Kontakte, zwei MIPI-CSI-Datenlanes und Taktlane; Sensorversorgung und Steuerbus beachten |
-| Audio | U10 ES8311, U8 NS4150B, MIC1, H4 mit differenziellem Lautsprecherausgang |
-| Lautsprecher | Hersteller nennt 8 Ω / 2 W und MX1.25-Zweipolanschluss; kein Audiofunktionstest am eigenen Board |
-| I2C / UART | H1/H2, SH1.0 mit jeweils vier Kontakten; gemeinsame Versorgungsauswahl H5 |
-| Erweiterung | P6, 2×20 Kontakte; 28 GPIO-Netze, 4 Versorgungskontakte und 8 Massekontakte |
-| Weitere SoC-Funktionen | SPI, I2S, ADC, PWM, RMT, TWAI u. a.; kein CAN- oder RS485-Transceiver in diesem Schaltplan |
+| Ethernet | U11 IP101GRI, RMII, 100-Mbit/s RJ45 RJ1; no Gigabit Ethernet |
+| PoE | BD1/BD2 input bridges and a separate five-pin module interface; see [power](03-power.md) |
+| Wireless | ESP32-C6 over SDIO; Wi-Fi 6 and Bluetooth LE. The P4 has no integrated Wi-Fi radio |
+| USB-C | Power and UART download/debug through U5 CH343P; U6 EMH4T2R drives reset/boot from DTR/RTS |
+| USB-A | Native P4 USB 2.0 HS OTG; `USBD_N/P` are dedicated signals |
+| SD | MicroSD/TF SD1; GPIO39–44 data/control bus, Q1 supply switch controlled by GPIO45 |
+| Display | J1, 15 contacts, two MIPI-DSI data lanes and a clock lane; matching panel parameters and power budget required |
+| Camera | J3, 15 contacts, two MIPI-CSI data lanes and a clock lane; check sensor supply and control bus |
+| Audio | U10 ES8311, U8 NS4150B, MIC1, H4 differential speaker output |
+| Speaker | Manufacturer specifies 8 Ω / 2 W and an MX1.25 two-pin connector; no owner audio function test |
+| I2C / UART | H1/H2, four contacts each, SH1.0; shared supply selection H5 |
+| Expansion | P6, 2×20 contacts; 28 GPIO nets, four supply contacts and eight ground contacts |
+| Other SoC functions | SPI, I2S, ADC, PWM, RMT, TWAI and others; no CAN or RS485 transceiver in this schematic |
 
-Die MIPI- und Beschleunigerfunktionen des P4 erlauben Bildverarbeitung, ihre praktische Nutzbarkeit hängt von Chiprevision, Treiber, Sensor und Display ab. Ein erfolgreicher LAN-Test belegt weder Kamera noch H.264.
+Practical use of P4 MIPI and image acceleration depends on chip revision, drivers, sensor and display. A successful LAN test does not validate camera operation or H.264 encoding.
 
-## Mechanik
+## Mechanical information
 
-Die aktuelle Herstellermaßzeichnung nennt **55 × 68 mm**, Lochmittenabstände **48 × 33 mm**. USB- und RJ45-Überstände, Einbauhöhe, Lochdurchmesser, Header-Raster und Gehäusefreiräume sind hier nicht am eigenen Board vermessen. Für ein Gehäuse die originale [3D-Datei](https://files.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH/ESP32-P4-WIFI6-POE-ETH-3D.zip) und das tatsächliche Exemplar abgleichen. Maße ersetzen keine Passprobe.
+The current manufacturer drawing specifies **55 × 68 mm**, with mounting-hole centres **48 × 33 mm** apart. USB/RJ45 protrusions, installed height, hole diameter, header pitch and enclosure clearances were not measured on the owner boards. For enclosure design, compare the original [3D archive](https://files.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH/ESP32-P4-WIFI6-POE-ETH-3D.zip) with the actual board and perform a fit check.
 
-## Noch zu erfassen
+## Information still required
 
-Platinenaufdruck, Headerausführung, P4-/C6-Modulaufschrift, PoE-Modul, R12-Bestückung, H5-Stellung, Antenne, eingebautes Zubehör und zulässige Strombudgets. Unbekannt bleibt unbekannt; die [Boarddaten](../data/board.json) verwenden dafür `null`.
+PCB markings, header version, P4/C6 module markings, PoE module, R12 population, H5 position, antenna, accessories and permissible current budgets. Unknown values remain `null` in the [board data](../data/board.json). The [evidence checklist](07-evidence-checklist.md) explains what to collect first.

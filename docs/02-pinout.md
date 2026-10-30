@@ -1,16 +1,16 @@
-# Pinbelegung und GPIO-Nutzung
+# Pinout and GPIO usage
 
-Stand: 30.10.2026. Quelle: WS-SCHEMATIC, SHA-256 `885b8f038881c6656486fea143bcf749f17c6a1ec9006cc693dcdb298018380b`, Blatt 1. Kontakte wurden aus dem Schaltplan visuell übertragen. [Quellenregister](../sources/README.md).
+Updated 2026-10-30. Source: WS-SCHEMATIC, SHA-256 `885b8f038881c6656486fea143bcf749f17c6a1ec9006cc693dcdb298018380b`, sheet 1. Contacts were transcribed from the visually reviewed schematic. [Source register](../sources/README.md).
 
-## Zuerst Orientierung und Revision klären
+## Establish orientation and revision first
 
-Die [neue farbige Headeransicht](https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-POE-ETH-details-inter-9a44d25075d91a5039181189b5e82867.webp) zeigt oben links 3V3 und rechts 5V. Die [ältere schwarze Headeransicht](https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-POE-ETH-details-inter-2-bc32d0b522f12d2743cb5eb34544484e.webp) zeigt dort links 5V und rechts 3V3. Die weiteren Spalten sind ebenfalls vertauscht.
+The [new coloured-header picture](https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-POE-ETH-details-inter-9a44d25075d91a5039181189b5e82867.webp) shows 3V3 at the upper left and 5V at the upper right. The [older black-header picture](https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-POE-ETH-details-inter-2-bc32d0b522f12d2743cb5eb34544484e.webp) shows 5V on the left and 3V3 on the right. The other columns are reversed as well.
 
-Die folgende Nummerierung entspricht ausschließlich dem **Schaltplansymbol P6**. Daraus wird keine ungeprüfte Links-/Rechts-Position am eigenen Board abgeleitet. Vor dem Verdrahten Pin 1, Versorgungen, GND, Aufdruck und Platinenrevision abgleichen. Die 40-polige Form bedeutet keine Raspberry-Pi-Pinkompatibilität.
+The numbering below follows **schematic symbol P6** only. It does not establish an unverified left/right position on an owner board. Check pin 1, supplies, GND, silkscreen and PCB revision before wiring. A 40-pin shape does not establish Raspberry Pi pin compatibility.
 
-## P6: alle 40 Kontakte
+## P6: all 40 contacts
 
-| Pin im Plan | Signal | Pin im Plan | Signal |
+| Schematic pin | Signal | Schematic pin | Signal |
 | --- | --- | --- | --- |
 | 1 | VCC_5V | 2 | ESP_3V3 |
 | 3 | VCC_5V | 4 | GPIO7 |
@@ -33,13 +33,13 @@ Die folgende Nummerierung entspricht ausschließlich dem **Schaltplansymbol P6**
 | 37 | GPIO27 | 38 | GPIO47 |
 | 39 | GPIO45 | 40 | GND |
 
-Damit sind 28 verschiedene GPIO-Netze, zweimal 3,3 V, zweimal 5 V und acht Massekontakte erfasst. Ein herausgeführter GPIO ist nicht automatisch frei: mehrere Kontakte sind bereits mit Peripherie verbunden.
+This accounts for 28 different GPIO nets, two 3.3-V contacts, two 5-V contacts and eight grounds. An exposed GPIO is not automatically available; several contacts already connect to onboard peripherals.
 
-## Zusatzanschlüsse
+## Additional connectors
 
-Alle folgenden Zahlen sind Schaltplankontakte. Befestigungs-/Schirmkontakte mit Nummer 0 sind ausgenommen. H1/H2 sind laut Hersteller SH1.0; H4 ist MX1.25. Physische Steckrichtung am eigenen Exemplar ist nicht bestätigt.
+All numbers are schematic contacts. Mounting/shield contacts numbered 0 are excluded. The manufacturer identifies H1/H2 as SH1.0 and H4 as MX1.25. Physical plug orientation on the owner boards has not been confirmed.
 
-| Anschluss | Kontaktfolge im Plan |
+| Connector | Schematic contact sequence |
 | --- | --- |
 | H1 | 1: OUT_LE; 2: GND; 3: GPIO7; 4: GPIO8 |
 | H2 | 1: OUT_LE; 2: GND; 3: GPIO38; 4: GPIO37 |
@@ -49,9 +49,9 @@ Alle folgenden Zahlen sind Schaltplankontakte. Befestigungs-/Schirmkontakte mit 
 | J6 | 1: GND; 2: VCC_5V |
 | PoE | 1: VDD; 2: VSS; 3: PGND; 4: VCC_5V; 5: GND |
 
-H1 = I2C, H2 = P4-UART, H4 = Lautsprecher, H5 = Versorgungsauswahl, H7 = C6-UART/Boot, J6 = 5-V-Versorgung. OUT_LE ist keine Logikpegelwandlung. H4 hat keinen Massekontakt für den Lautsprecher. Der PoE-Anschluss ist ein interner Modulanschluss. [Versorgungsdetails](03-power.md).
+H1 = I2C, H2 = P4 UART, H4 = speaker, H5 = supply selector, H7 = C6 UART/boot, J6 = 5-V supply. OUT_LE does not provide logic-level conversion. Neither H4 speaker contact is ground. The PoE connector is an internal module interface. [Power details](03-power.md).
 
-## MIPI: J1 und J3
+## MIPI: J1 and J3
 
 | Pin | J1 / DSI | J3 / CSI |
 | --- | --- | --- |
@@ -71,28 +71,28 @@ H1 = I2C, H2 = P4-UART, H4 = Lautsprecher, H5 = Versorgungsauswahl, H7 = C6-UART
 | 14 | ESP_3V3 | ESP_I2C_SDA |
 | 15 | ESP_3V3 | ESP_3V3 |
 
-CSI_IO0 wird im Plan über R46 (10 kΩ) an 3,3 V gelegt; der entsprechende R47-Pfad an CSI_IO1 ist NC. Das sind keine zugewiesenen P4-GPIOs. SDA/SCL sind GPIO7/8; R50/R48 bilden Pull-ups mit je 2,2 kΩ nach 3,3 V. DSI führt an Pin 14 und 15 jeweils 3,3 V; nur Pin 13 ist dort GND. Stecker, Kontaktseite, Versorgung und Panel-/Sensortreiber müssen zum Zubehör passen.
+CSI_IO0 connects to 3.3 V through R46 (10 kΩ); the corresponding R47 path on CSI_IO1 is NC. These are not assigned P4 GPIOs. SDA/SCL are GPIO7/8; R50/R48 are 2.2-kΩ pull-ups to 3.3 V. DSI pins 14 and 15 both carry 3.3 V; pin 13 is GND. Connector orientation, supply and panel/sensor drivers must match the accessory.
 
-## Belegte GPIO-Gruppen
+## Assigned GPIO groups
 
-| Bereich | P4-GPIOs und Funktion |
+| Area | P4 GPIOs and functions |
 | --- | --- |
-| Ethernet | MDC31, MDIO52, Reset51, REF_CLK50, TX_EN49, TXD0/1 34/35, CRS_DV28, RXD0/1 29/30 |
-| SD | CMD44, CLK43, DAT0/1/2/3 39/40/41/42; Q1-Versorgungssteuerung45 |
-| Audio | Codec-Daten hinein9 / heraus11, LRCK10, BCLK12, MCLK13; PA_CTRL53 |
-| I2C | SDA7, SCL8; gemeinsam für Codec, Erweiterung und MIPI-Steueranschlüsse |
-| C6-SDIO-Verbindung | P4 14/15/16/17 ↔ C6 20/21/22/23; P4 18/19 ↔ C6 18/19 |
-| C6-Nebensignale | P4 6 ↔ C6_IO2; P4 54 ↔ C6_CHIP_PU |
-| UART | P4 TX37, RX38; gleichzeitig am CH343 und H2/P6 |
-| 32-kHz-Quarz | GPIO0/1 an Y2; nicht als unbelastete Pins behandeln |
-| Boot / Reset | BOOT GPIO35; Reset ESP_EN; P4-Strapping GPIO34–38 |
+| Ethernet | MDC31, MDIO52, reset51, REF_CLK50, TX_EN49, TXD0/1 34/35, CRS_DV28, RXD0/1 29/30 |
+| SD | CMD44, CLK43, DAT0/1/2/3 39/40/41/42; Q1 supply control45 |
+| Audio | Codec input9 / output11, LRCK10, BCLK12, MCLK13; PA_CTRL53 |
+| I2C | SDA7, SCL8; shared by codec, expansion and MIPI control connectors |
+| C6 SDIO wiring | P4 14/15/16/17 ↔ C6 20/21/22/23; P4 18/19 ↔ C6 18/19 |
+| C6 control signals | P4 6 ↔ C6_IO2; P4 54 ↔ C6_CHIP_PU |
+| UART | P4 TX37, RX38; also connected to CH343 and H2/P6 |
+| 32-kHz crystal | GPIO0/1 connect to Y2; account for that load |
+| Boot / reset | BOOT GPIO35; reset ESP_EN; P4 strapping GPIO34–38 |
 
-Die C6-Zeile bezeichnet die physischen Verbindungen im geprüften Plan, nicht die P4-GPIO-Nummern des C6. Für SDIO zusätzlich CLK/CMD/Datenrollen aus der passenden Host-/C6-Firmware abgleichen.
+The C6 row identifies physical connections in the reviewed schematic. P4 and C6 GPIO numbers belong to separate chips. Match the SDIO CLK/CMD/data roles against the actual host/C6 firmware as well.
 
-GPIO35 teilt BOOT mit Ethernet-TXD1; GPIO45 beeinflusst die SD-Versorgung, GPIO53 den Verstärker und GPIO54 den C6-Reset. Lasten an UART-/Strappingpins können den Start verhindern. Auch GPIO6 ist bereits mit dem C6 verbunden. P4-GPIO24/25 sind dagegen im geprüften Plan nicht mit C6_IO13/12 verbunden; die ähnlich platzierten Textlabels sind keine Netzverbindung. Die vollständige Zuordnung für GPIO0 bis GPIO54 steht in [gpio-usage.csv](../data/gpio-usage.csv).
+GPIO35 shares BOOT with Ethernet TXD1; GPIO45 affects SD power, GPIO53 the amplifier and GPIO54 C6 reset. Loads on UART/strapping pins can affect boot. GPIO6 is already connected to the C6. P4 GPIO24/25 have no schematic connection to C6_IO13/12; neighbouring text labels do not establish a net connection. The full GPIO0–54 assignment is in [gpio-usage.csv](../data/gpio-usage.csv).
 
-USB-A nutzt die dedizierten HS-Signale USBD_N/P. USB-C geht über USB_DBG_D_N/P zum CH343 und von dort zum P4-UART. USB-C ist damit kein direkt herausgeführter P4-USB-HS-Port.
+USB-A uses dedicated HS signals USBD_N/P. USB-C reaches the CH343 through USB_DBG_D_N/P and then the P4 UART. It is not a direct P4 USB-HS connection.
 
-## CSV-Umfang
+## CSV scope
 
-Die [Anschlussliste](../data/pinout.csv) enthält **94 nummerierte Kontakte** von P6, H1, H2, H4, H5, H7, J6, J1, J3 und PoE. Ausgenommen sind einzelne USB-/RJ45-/SD-Slotkontakte, Modul-Lötpads und Schirm-/Befestigungskontakte. Die Busfunktionen dieser Schnittstellen sind oben dokumentiert. Es wird weder eine vollständige Platinen-Netzliste noch eine am Exemplar durchgemessene Pinbelegung behauptet.
+The [connector list](../data/pinout.csv) contains **94 numbered contacts** across P6, H1, H2, H4, H5, H7, J6, J1, J3 and PoE. Individual USB/RJ45/SD-slot contacts, module solder pads and shield/mounting contacts are excluded. Their bus functions are documented above. This is neither a complete PCB netlist nor a continuity measurement of the owner boards. The [evidence checklist](07-evidence-checklist.md) describes the remaining physical identification work.

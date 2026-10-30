@@ -1,35 +1,37 @@
-# Eigene Boards: Nachweise und Grenzen
+# Owner boards: evidence and limits
 
-Zusammengeführt am 30.10.2026 aus vorhandenen Inbetriebnahme- und Forschungsunterlagen. **Für diese Katalogaufnahme fand kein neuer Zugriff auf die Geräte statt.** Die Angaben sind dokumentierte frühere Befunde, keine Live-Abfrage des heutigen Zustands. Beide Exemplare werden nur als Board 1 und Board 2 bezeichnet.
+Consolidated on 2026-10-30 from existing bring-up and research records. **No new device access was performed for this catalog entry or its English translation.** These are historical findings, not a live query. The two units are identified only as Board 1 and Board 2.
 
-| Merkmal | Board 1 | Board 2 | Aussagekraft |
+| Item | Board 1 | Board 2 | Evidence scope |
 | --- | --- | --- | --- |
-| Vom Besitzer zugeordnetes Modell | ESP32-P4-WIFI6-POE-ETH | ESP32-P4-WIFI6-POE-ETH | Exakte Platinenrevision noch ohne Sichtnachweis |
-| Chiprevision | P4 v1.3 | P4 v1.3 | Auslesung vom 29.10.2026 |
-| Flash | 32 MiB | 32 MiB | Ausgelesen und vor Installation vollständig lokal gesichert |
-| PSRAM | 32 MiB | 32 MiB | Erkennung und erfolgreicher SPI-SRAM-Starttest |
-| CPU-/PSRAM-Konfiguration | 360 / 200 MHz | 360 / 200 MHz | Firmwarekonfiguration, keine externe Taktmessung |
-| SDK der Inbetriebnahme | ESP-IDF 5.5.4 | ESP-IDF 5.5.4 | Rev-1.x-Firmware gestartet |
-| Versorgung der Versuche | USB-C vom Rechner | USB-C vom Rechner | Ethernet jeweils ohne PoE |
-| Ethernet | DHCP und Anwendungskommunikation | DHCP und Anwendungskommunikation | Erfolgreiche Solo- und Zweierläufe dokumentiert |
-| C6-Funk | Nicht benutzt | Nicht benutzt | WLAN/BLE damit ungetestet |
-| Flashzustand | Original privat gesichert | Original privat gesichert | Wiederherstellung nicht praktisch abgenommen |
-| Secure Boot / Flashverschlüsselung | Bei Inbetriebnahme deaktiviert | Bei Inbetriebnahme deaktiviert | Keine eFuse-Änderung in den dokumentierten Arbeiten |
+| Owner-reported model | ESP32-P4-WIFI6-POE-ETH | ESP32-P4-WIFI6-POE-ETH | Exact PCB revision still requires visual identification |
+| Chip revision | P4 v1.3 | P4 v1.3 | Readout dated 2026-10-29 |
+| Flash | 32 MiB | 32 MiB | Read out and fully backed up locally before installation |
+| PSRAM | 32 MiB | 32 MiB | Detection and successful SPI-SRAM startup test |
+| CPU / PSRAM settings | 360 / 200 MHz | 360 / 200 MHz | Firmware configuration, not an external clock measurement |
+| Bring-up SDK | ESP-IDF 5.5.4 | ESP-IDF 5.5.4 | Revision-1.x firmware booted |
+| Experimental power | USB-C from computer | USB-C from computer | Ethernet without PoE |
+| Ethernet | DHCP and application communication | DHCP and application communication | Successful standalone and two-board runs documented |
+| C6 wireless | Not used | Not used | WLAN/BLE remain untested |
+| Flash preservation | Original kept privately | Original kept privately | Restoration not practically qualified |
+| Secure boot / flash encryption | Disabled at bring-up | Disabled at bring-up | No eFuse changes in the documented work |
 
-## Was die bisherigen Versuche bestätigen
+## What the existing experiments establish
 
-Die Boards starteten die eigene Firmware, initialisierten PSRAM und Ethernet, nahmen ein Modellpaket im Flash auf und führten lokale Textgenerierung aus. Nach Neustart wurde das Modell wieder geladen. Spätere normale LAN-Firmwareupdates und Modellupdates sind dokumentiert. Diese Ergebnisse belegen einen nutzbaren P4-/Speicher-/Ethernet-Pfad im beschriebenen Aufbau.
+The boards booted the owner firmware, initialized PSRAM and Ethernet, stored a model package in flash and generated text locally. After restart, the model loaded again. Later normal LAN firmware and model updates are documented. These results establish a working P4/memory/Ethernet path in the described setup.
 
-Ausgewählte bereits veröffentlichte Forschungsnachweise stehen im [Cluster-Repository, geprüfter Stand 0675f868](https://github.com/Mcgee1704/esp32-p4-llm-cluster-research/tree/0675f8687b9459fafa4545587ef14aedd118187d). Der Katalog übernimmt keine laufende Modell- oder Firmwareversionsverwaltung; deren aktuelle Version muss bei einer Folgearbeit am jeweiligen Gerät neu festgestellt werden.
+Selected published evidence is available in the [cluster repository at reviewed commit 0675f868](https://github.com/Mcgee1704/esp32-p4-llm-cluster-research/tree/0675f8687b9459fafa4545587ef14aedd118187d). This catalog does not track live model or firmware versions. Determine the installed versions again when a future task depends on them.
 
-## Nicht bestätigt
+## Unresolved items
 
-- Platinenrevision, schwarze/farbige Headerausführung und physische Pin-1-Zuordnung.
-- Exakter P4-Flashbaustein, C6-Modul, C6-Firmware und Antennenbestückung.
-- PoE-Modultyp, R12-Bestückung, H5-Stellung, Strombudgets und elektrische PoE-/USB-Kettenabnahme.
-- WLAN, BLE, SD-Karte, USB-OTG-Anwendungsbetrieb, Audio, MIPI-Display und Kamera.
-- Vollständige Prüfung aller 28 Erweiterungs-GPIOs, Langzeitlast und Grenztemperaturen.
-- Praktische Abnahme einer Originalflash-Wiederherstellung, absichtlich unterbrochener OTA-Vorgänge und aller Rollbackfälle.
-- Automatisches Flashen fabrikneuer Nachbarboards und reale Hardwaretests mit P4-Revision 3.x.
+- PCB revision, black/coloured header version and physical pin-1 assignment.
+- Exact P4 flash component, C6 module, C6 firmware and antenna assembly.
+- PoE module type, R12 population, H5 position, current budgets and electrical qualification of the proposed PoE/USB chain.
+- WLAN, BLE, SD card, USB OTG application use, audio, MIPI display and camera.
+- Complete testing of all 28 expansion GPIOs, long-duration load and temperature limits.
+- Practical original-flash restoration and deliberately interrupted OTA/rollback cases.
+- Automatic installation on factory-state neighbours and real hardware tests on P4 revision 3.x.
 
-Die vollständigen lokalen Nachweise enthalten gerätebezogene Daten und bleiben privat. Diese Zusammenfassung veröffentlicht keine MAC-Adressen, Seriennummern, lokalen Netzadressen, Zugangsdaten, Flashabbilder oder Rohprotokolle. Die Aufnahme eines Boards verlangt keine zusätzlichen Peripherietests; fehlende Tests werden als offen geführt.
+The [evidence checklist](07-evidence-checklist.md) identifies the photos and owner information needed first. Functional coverage and electrical qualification are separate follow-up work; catalog inclusion does not require every peripheral to be tested.
+
+Complete local records contain device-specific data and remain private. This summary omits MAC addresses, serial numbers, local network addresses, credentials, flash images and raw logs. An untested item is recorded as unresolved, not as a fault.

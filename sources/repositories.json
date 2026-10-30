@@ -10,8 +10,8 @@
       "commit": "6f78fa810ec505048c1941e3d09cefc9f29129bd",
       "retrieved_on": "2026-10-30",
       "github_license_spdx": "Apache-2.0",
-      "purpose": "Herstellerbeispiele und Board-/Revisionskonfiguration; Basistests, Ethernet, SD, Audio, MIPI und UI.",
-      "limits": "Nur passend konfigurierte Beispiele verwenden; einzelne Defaults setzen 16 MB Flash."
+      "purpose": "Manufacturer examples and board/revision configuration: baseline checks, Ethernet, SD, audio, MIPI and UI.",
+      "limits": "Use a matching configuration; some examples default to 16-MB flash."
     },
     {
       "id": "ESP-IDF",
@@ -21,8 +21,8 @@
       "commit": "735507283d5b2f9fb363a1901172dbd9e847945d",
       "retrieved_on": "2026-10-30",
       "github_license_spdx": "Apache-2.0",
-      "purpose": "SDK des vorhandenen Prüfstands; Ethernet-, Speicher- und Gerätetreiber.",
-      "limits": "v5.5.4 ist der hier belegte Prüfstand, keine Aussage über die neueste Version."
+      "purpose": "SDK used in the existing test setup; Ethernet, memory and device drivers.",
+      "limits": "v5.5.4 is the documented test version, not a claim about the latest release."
     },
     {
       "id": "ESP-HOSTED",
@@ -32,8 +32,8 @@
       "commit": "a0422923d01fa5cd5f4987885fe743656398b7c5",
       "retrieved_on": "2026-10-30",
       "github_license_spdx": "NOASSERTION",
-      "purpose": "Übersichtsrepository der Hosted-Familie.",
-      "limits": "Aktive MCU-Implementierung inzwischen in esp-hosted-mcu; Lizenzdateien der verwendeten Teile prüfen."
+      "purpose": "Overview repository for the Hosted family.",
+      "limits": "Active MCU implementation is now in esp-hosted-mcu; check license files for the parts used."
     },
     {
       "id": "ESP-HOSTED-MCU",
@@ -43,8 +43,8 @@
       "commit": "78b1c1c43c02b0c4e898cf87f94679278b1ddaff",
       "retrieved_on": "2026-10-30",
       "github_license_spdx": "NOASSERTION",
-      "purpose": "Funkanbindung eines MCU-Hosts über einen Espressif-Coprozessor.",
-      "limits": "Host und C6 müssen zueinander passen; eigene Funkprüfung fehlt. Lizenzdateien der konkreten Komponenten prüfen."
+      "purpose": "Wireless connectivity for an MCU host through an Espressif coprocessor.",
+      "limits": "Host and C6 firmware must match; owner wireless testing remains open. Check component licenses."
     },
     {
       "id": "ESP-KVM",
@@ -54,8 +54,8 @@
       "commit": "39273c3db6fc2d02dacf596d635938c666af836c",
       "retrieved_on": "2026-10-30",
       "github_license_spdx": "Apache-2.0",
-      "purpose": "IP-KVM-Anwendungsbeispiel; vom Hersteller für dieses Board verlinkt.",
-      "limits": "Zusätzliche HDMI-CSI-Hardware; revisionsgerechter Build und eigene elektrische Prüfung erforderlich. Hier nicht installiert."
+      "purpose": "IP-KVM example linked by the manufacturer for this board.",
+      "limits": "Requires extra HDMI-to-CSI hardware, a revision-appropriate build and electrical review. Not installed here."
     },
     {
       "id": "P4KVM",
@@ -65,8 +65,8 @@
       "commit": "18e0b85735d9569d4264fe4d5b58f6659c148680",
       "retrieved_on": "2026-10-30",
       "github_license_spdx": "NOASSERTION",
-      "purpose": "Früher Ethernet-KVM-Prototyp mit TC358743 für P4 vor Revision 3.",
-      "limits": "README nennt fehlenden Schutz und POC-Status; hier keine Betriebsfreigabe. Lizenzdateien vor Übernahme prüfen."
+      "purpose": "Early Ethernet KVM proof of concept with TC358743 for pre-revision-3 P4 chips.",
+      "limits": "README identifies missing security and proof-of-concept status; no operating qualification here. Check licenses before reuse."
     },
     {
       "id": "OWN-CLUSTER",
@@ -76,8 +76,8 @@
       "commit": "0675f8687b9459fafa4545587ef14aedd118187d",
       "retrieved_on": "2026-10-30",
       "github_license_spdx": "NOASSERTION",
-      "purpose": "Eigene veröffentlichte Experimente zu P4-Speicher, Ethernet und verteilter Textinferenz.",
-      "limits": "Funktionsnachweis für den dokumentierten Aufbau; keine komplette Boardabnahme. Gemischte Herkunft: LICENSE und THIRD_PARTY beachten."
+      "purpose": "Published owner experiments on P4 memory, Ethernet and distributed text inference.",
+      "limits": "Evidence for the documented setup, not complete board qualification. Mixed provenance: consult LICENSE and THIRD_PARTY."
     }
   ]
 }

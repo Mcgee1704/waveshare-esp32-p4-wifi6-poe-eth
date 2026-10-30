@@ -1,38 +1,39 @@
 # Waveshare ESP32-P4-WIFI6-POE-ETH
 
-Technische Referenz zum P4-Board mit Ethernet, PoE-Anbindung und ESP32-C6-Funkcoprozessor. Stand: **30.10.2026**. Die Dokumentation trennt Herstellerangaben, Schaltplanbefunde und bereits vorliegende Prüfungen an zwei eigenen Exemplaren.
+Technical reference for the P4 board with Ethernet, a PoE module interface and an ESP32-C6 wireless coprocessor. Updated **2026-10-30**. Manufacturer specifications, schematic findings and existing tests on two owner boards are identified separately.
 
-| Thema | Dokument |
+| Topic | Document |
 | --- | --- |
-| Modell, Varianten, Speicher, Bauteile, Maße | [Hardware](docs/01-hardware.md) |
-| 40-poliger Header, Zusatzanschlüsse, GPIO-Belegung und Konflikte | [Pinbelegung](docs/02-pinout.md) |
-| USB-C, USB-A, PoE, Spannungswahl und offene Strombudgets | [Versorgung](docs/03-power.md) |
-| USB, Bootmodus, Chiprevision und ESP-IDF-Konfiguration | [Programmierung](docs/04-firmware.md) |
-| Nachweise und offene Punkte der beiden eigenen Boards | [Eigene Boards](docs/05-own-boards.md) |
-| Herstellerbeispiele, ESP-Hosted, KVM und Cluster-Forschung | [Git-Projekte](docs/06-git-projects.md) |
-| Quellen, Prüfsummen und widersprüchliche Angaben | [Quellenregister](sources/README.md) |
-| Wiederverwendbare Daten | [Board-JSON](data/board.json), [Anschluss-CSV](data/pinout.csv), [GPIO-Nutzung](data/gpio-usage.csv) |
+| Model, variants, memory, components and dimensions | [Hardware](docs/01-hardware.md) |
+| 40-pin header, additional connectors, GPIO assignments and conflicts | [Pinout](docs/02-pinout.md) |
+| USB-C, USB-A, PoE, voltage selection and current budgets | [Power](docs/03-power.md) |
+| USB, boot mode, chip revision and ESP-IDF configuration | [Programming](docs/04-firmware.md) |
+| Existing evidence and unresolved items for both owner boards | [Owner boards](docs/05-own-boards.md) |
+| Manufacturer examples, ESP-Hosted, KVM and cluster research | [Git projects](docs/06-git-projects.md) |
+| Photos, equipment information and tests needed to resolve open items | [Evidence checklist](docs/07-evidence-checklist.md) |
+| Sources, checksums and conflicting descriptions | [Source register](sources/README.md) |
+| Reusable data | [Board JSON](data/board.json), [connector CSV](data/pinout.csv), [GPIO usage](data/gpio-usage.csv) |
 
-## Kurzreferenz
+## Quick reference
 
-- Modellfamilie: ESP32-P4-WIFI6-POE-ETH; Basispaket SKU 32832, Pakete C/D SKU 32833/32834. Das Zubehörpaket der eigenen Exemplare ist nicht belegt.
-- Zwei HP-RISC-V-Kerne; für dieses Board dokumentiert und im bisherigen Aufbau konfiguriert: **360 MHz**. Dazu ein LP-Kern bis 40 MHz. Die allgemeinen 400 MHz im aktuellen P4-Chipdatenblatt sind keine Freigabe für die eigenen Rev-1.3-Exemplare.
-- **32 MiB Flash und 32 MiB PSRAM** an beiden eigenen P4s dokumentiert; PSRAM-Starttest erfolgreich.
-- Ethernet: IP101GRI, RMII; MDC 31, MDIO 52, Reset 51, Referenztakt 50, TX_EN 49, TXD0/1 34/35, CRS_DV 28, RXD0/1 29/30.
-- **USB-C führt zum CH343P-UART-Wandler**, USB-A zum nativen P4-USB-HS-OTG. Die Buchsen erfüllen verschiedene Aufgaben.
+- Model family: ESP32-P4-WIFI6-POE-ETH; Basic kit SKU 32832, C/D kits SKU 32833/32834. The exact accessory kit of the owner boards has not been established.
+- Two HP RISC-V cores; **360 MHz** is the documented board profile and existing experimental configuration. One LP core runs at up to 40 MHz. The 400 MHz family specification in the current P4 datasheet does not establish suitability for the owner's revision-1.3 chips.
+- **32 MiB flash and 32 MiB PSRAM** documented on both owner P4s; PSRAM startup tests passed.
+- Ethernet: IP101GRI, RMII; MDC 31, MDIO 52, reset 51, reference clock 50, TX_EN 49, TXD0/1 34/35, CRS_DV 28, RXD0/1 29/30.
+- **USB-C connects to the CH343P UART bridge**; USB-A connects to the native P4 USB HS OTG interface.
 - I2C: SDA 7, SCL 8. UART0: TX 37, RX 38. SD: CMD 44, CLK 43, D0–D3 39/40/41/42.
-- 40-poliger Header mit 28 GPIO-Netzen; MIPI-DSI, MIPI-CSI, Mikrofon, ES8311-Codec und Lautsprecheranschluss vorhanden.
+- 40-pin header with 28 GPIO nets; MIPI-DSI, MIPI-CSI, microphone, ES8311 codec and speaker connector.
 
-Grundlagen: [Waveshare-Übersicht](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH), [Schaltplan](https://files.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH/ESP32-P4-WIFI6-POE-ETH-Schematic.pdf), [eigene Nachweise](docs/05-own-boards.md).
+References: [Waveshare overview](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-ETH), [schematic](https://files.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH/ESP32-P4-WIFI6-POE-ETH-Schematic.pdf), [owner evidence](docs/05-own-boards.md).
 
-## Vor dem Anschließen
+## Before connecting peripherals
 
-**Die Herstellerbilder der schwarzen und farbigen Header zeigen die Spalten vertauscht.** Die CSV und nummerierte Tabelle beziehen sich ausdrücklich auf P6 im geprüften Schaltplan. Pin 1, Masse und Versorgung am eigenen Exemplar identifizieren; eine Fotoseite oder Headerfarbe ist kein ausreichender Verdrahtungsnachweis.
+**The manufacturer's black-header and coloured-header pictures show opposite left/right columns.** The CSV and numbered table follow P6 in the reviewed schematic. Identify pin 1, ground and supply contacts on the actual board; image orientation or header colour alone does not verify the wiring.
 
-H1/H2 führen eine über H5 wählbare Versorgung `OUT_LE`; die Signale bleiben 3,3-V-Logik. Die Hersteller-FAQ erlaubt USB-C plus PoE. Eine USB-A-zu-USB-C-Kette mit mehreren Boards hat jedoch kein nachgewiesenes Strombudget. [Einzelheiten](docs/03-power.md).
+H1/H2 use the H5-selectable supply `OUT_LE`; their signal levels remain 3.3 V. The manufacturer FAQ allows USB-C and PoE together. A multi-board USB-A-to-USB-C power chain has no established current budget. [Details](docs/03-power.md).
 
-Die vorhandenen Funktionsergebnisse stammen aus einem Aufbau mit USB-C-Versorgung und Ethernet **ohne PoE**. WLAN/BLE, Audio, Kamera, Display und SD wurden damit nicht abgenommen. Platinenrevision und konkrete C6-Bestückung bleiben offen.
+Existing functional results used USB-C power and Ethernet **without PoE**. They do not establish operation of WLAN/BLE, audio, camera, display or SD. PCB revision and exact C6 assembly remain unresolved. Start with the [photo and identification checklist](docs/07-evidence-checklist.md) to close those gaps.
 
-Dieses Repository enthält eigene technische Notizen und Quellenverweise. Es ist keine offizielle Waveshare-Veröffentlichung. Original-PDFs, Herstellerbilder, private Flashsicherungen und rohe Geräteprotokolle werden nicht mitgeführt. [Veröffentlichungsumfang und Rechte](PUBLICATION.md).
+This repository contains independent technical notes and source references. It is not an official Waveshare publication. Original PDFs, manufacturer images, private flash backups and raw device logs are kept separately. [Publication scope and rights](PUBLICATION.md).
 
-[Zurück zum Board-Katalog](https://github.com/Mcgee1704/board-katalog)
+[Board catalog](https://github.com/Mcgee1704/board-katalog)
