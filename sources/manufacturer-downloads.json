@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-30",
+  "originals_included": false,
+  "downloads": [
+    {
+      "id": "WS-SCHEMATIC",
+      "url": "https://files.waveshare.com/wiki/ESP32-P4-WIFI6-POE-ETH/ESP32-P4-WIFI6-POE-ETH-Schematic.pdf",
+      "bytes": 1734900,
+      "sha256": "885b8f038881c6656486fea143bcf749f17c6a1ec9006cc693dcdb298018380b",
+      "retrieved_on": "2026-10-30",
+      "original_redistribution_permission_established": false
+    },
+    {
+      "id": "WS-PINOUT-NEW",
+      "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-POE-ETH-details-inter-9a44d25075d91a5039181189b5e82867.webp",
+      "bytes": 41258,
+      "sha256": "9b6892a66bfadc64c9c8810d2a2dd3ac20a4ffa68ea4ac8b0dbfe929ee8d7535",
+      "retrieved_on": "2026-10-30",
+      "original_redistribution_permission_established": false
+    },
+    {
+      "id": "WS-PINOUT-OLD",
+      "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-POE-ETH-details-inter-2-bc32d0b522f12d2743cb5eb34544484e.webp",
+      "bytes": 40278,
+      "sha256": "c9b3b932465f56512c98d56e6e3a3fce89a5618a1b5fe9a3e90368522ffdfa25",
+      "retrieved_on": "2026-10-30",
+      "original_redistribution_permission_established": false
+    },
+    {
+      "id": "WS-DIMENSIONS",
+      "url": "https://docs.waveshare.com/assets/images/ESP32-P4-WIFI6-POE-ETH-details-size-3f5fd8ec650821d9a492dd8dce19bfc2.webp",
+      "bytes": 49460,
+      "sha256": "985a3d975b7d72f9a7996fe7354b94d661b6cb3f025e5d0072bad3c7e13b9cbb",
+      "retrieved_on": "2026-10-30",
+      "original_redistribution_permission_established": false
+    }
+  ]
+}

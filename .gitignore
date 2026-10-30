@@ -1,0 +1,13 @@
+.local/
+.handoff/
+.env
+.env.*
+__pycache__/
+build*/
+managed_components/
+sdkconfig
+sdkconfig.old
+*.bin
+*.log
+*.pem
+*.key
