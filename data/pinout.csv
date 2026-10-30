@@ -39,19 +39,19 @@ P6,37,GPIO27,27,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; n
 P6,38,GPIO47,47,WS-SCHEMATIC,schematic_numbering_not_physical_verification,P6; no additional peripheral path assigned in the reviewed schematic; check function and boot behaviour for each project
 P6,39,GPIO45,45,WS-SCHEMATIC,schematic_numbering_not_physical_verification,SD supply control Q1; P6
 P6,40,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
-H1,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selected through H5; owner-board position unknown; no logic-level conversion
+H1,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selected through H5; see per-board visual records; actual voltage unmeasured; no logic-level conversion
 H1,2,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 H1,3,GPIO7,7,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SDA: codec/H1/DSI/CSI; P6
 H1,4,GPIO8,8,WS-SCHEMATIC,schematic_numbering_not_physical_verification,I2C SCL: codec/H1/DSI/CSI; P6
-H2,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selected through H5; owner-board position unknown; no logic-level conversion
+H2,1,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selected through H5; see per-board visual records; actual voltage unmeasured; no logic-level conversion
 H2,2,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,
 H2,3,GPIO38,38,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 RX from CH343/H2; boot strapping; P6
 H2,4,GPIO37,37,WS-SCHEMATIC,schematic_numbering_not_physical_verification,UART0 TX to CH343/H2; boot strapping; P6
 H4,1,PA_OUTL-,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Differential amplifier output; do not connect to GND
 H4,2,PA_OUTL+,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Differential amplifier output; do not connect to GND
-H5,1,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; assembly/position unknown
-H5,2,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; assembly/position unknown
-H5,3,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; assembly/position unknown
+H5,1,ESP_3V3,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; fitted link is board-specific; see owner-board visual records
+H5,2,OUT_LE,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; fitted link is board-specific; see owner-board visual records
+H5,3,VCC_5V,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,Supply selection for H1/H2; fitted link is board-specific; see owner-board visual records
 H7,1,C6_U0TXD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6 connector; not a P4 GPIO number
 H7,2,C6_U0RXD,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6 connector; not a P4 GPIO number
 H7,3,GND,,WS-SCHEMATIC,schematic_numbering_not_physical_verification,C6 connector; not a P4 GPIO number

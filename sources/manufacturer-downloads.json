@@ -34,6 +34,14 @@
       "sha256": "985a3d975b7d72f9a7996fe7354b94d661b6cb3f025e5d0072bad3c7e13b9cbb",
       "retrieved_on": "2026-10-30",
       "original_redistribution_permission_established": false
+    },
+    {
+      "id": "DIO7003-DS",
+      "url": "https://www.dioo.com/uploads/product/20210527/39809ef9c4aeae798493447426d5dd7c.pdf",
+      "bytes": 652960,
+      "sha256": "a4f21547d3df2698dadc1a6abaf416e1c5d61bcb5ac0907ff3dab250a3a91b2e",
+      "retrieved_on": "2026-10-30",
+      "original_redistribution_permission_established": false
     }
   ]
 }

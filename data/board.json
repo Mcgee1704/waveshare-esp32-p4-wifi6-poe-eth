@@ -19,7 +19,7 @@
       "sku": 32834
     }
   ],
-  "evidence_scope": "Manufacturer claims and schematic nets are not physical verification of every board revision. Own-board findings are historical records, not a live query.",
+  "evidence_scope": "Manufacturer claims and schematic nets are not physical verification of every board revision. Historical software/functional records and the 2026-10-30 visual identification of Board 1 are separate evidence types; no live device query or new electrical test was performed.",
   "mcu": {
     "schematic_part": "ESP32-P4NRW32",
     "current_product_page_part": "ESP32-P4NRW32X",
@@ -66,7 +66,8 @@
       "WS-MODEL",
       "WS-SCHEMATIC",
       "OWN-20261029"
-    ]
+    ],
+    "own_details_scope": "See individual_boards[].visual_identification; no common C6 assembly is assumed for both owner boards."
   },
   "ethernet": {
     "phy": "IP101GRI",
@@ -186,7 +187,8 @@
       "WS-SCHEMATIC",
       "WS-FAQ",
       "OWN-20261029"
-    ]
+    ],
+    "own_details_scope": "See individual_boards[].visual_identification for Board 1 H5/R12/U2 observations; global current budgets and measured voltages remain unknown."
   },
   "mechanical": {
     "manufacturer_board_dimensions_mm": [
@@ -232,9 +234,9 @@
       "id": "board-1",
       "evidence_date": "2026-10-29",
       "silicon_revision": "1.3",
-      "pcb_revision": null,
+      "pcb_revision": "2.0",
       "sales_package": null,
-      "header_version": null,
+      "header_version": "coloured",
       "flash_mib": 32,
       "psram_mib": 32,
       "psram_startup_test_passed": true,
@@ -247,7 +249,47 @@
       "flash_encryption_at_readout": false,
       "original_flash_backed_up_privately": true,
       "restore_tested": false,
-      "source_id": "OWN-20261029"
+      "source_id": "OWN-20261029",
+      "visual_identification": {
+        "date": "2026-10-30",
+        "source_id": "OWN-PHOTO-20261030-B1",
+        "evidence_type": "owner photographs; no device access or measurements",
+        "model_printed": "Waveshare ESP32-P4-WIFI6-POE-ETH",
+        "pcb_revision_marking": "Rev2.0",
+        "header_row_markers_visible": [
+          1,
+          2
+        ],
+        "electrical_header_mapping_verified": false,
+        "p4_module_marking": "ESP32-P4-Core",
+        "p4_soc_marking_on_shield": "ESP32-P4NRW32",
+        "p4_flash_capacity_marking": "32MB",
+        "p4_discrete_flash_part_identified": false,
+        "c6_module_marking": "ESP32-C6-MINI-1U",
+        "c6_exact_memory_suffix_confirmed": null,
+        "c6_flash_mib_confirmed": null,
+        "c6_firmware_identified": null,
+        "c6_antenna_cable_attached": true,
+        "antenna_model": null,
+        "h5_link_observed": "0-ohm link on VCC/3V3 side; 5V selection position unbridged",
+        "h1_h2_voltage_measured_v": null,
+        "r12_population_observed": "unpopulated at footprint matched to manufacturer layout",
+        "r12_continuity_measured": false,
+        "u2_populated": true,
+        "u2_top_marking_read": "P3HE",
+        "u2_exact_ordering_part_confirmed": null,
+        "poe_transformer_package_marking": "2613",
+        "complete_poe_module_identified": false,
+        "speaker_connected": true,
+        "speaker_impedance_ohm_confirmed": null,
+        "speaker_rated_power_w_confirmed": null,
+        "audio_function_tested": false,
+        "electrical_qualification_completed": false
+      },
+      "source_ids": [
+        "OWN-20261029",
+        "OWN-PHOTO-20261030-B1"
+      ]
     },
     {
       "id": "board-2",
@@ -286,6 +328,9 @@
     "WS-IDF",
     "ESP-P4-DS",
     "ESP-ETH",
-    "OWN-20261029"
+    "OWN-20261029",
+    "OWN-PHOTO-20261030-B1",
+    "DIO7003-DS",
+    "ESP-C6-MODULE-DS"
   ]
 }

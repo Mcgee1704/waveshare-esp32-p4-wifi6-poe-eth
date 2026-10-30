@@ -2,6 +2,12 @@
 
 Prepared 2026-10-30. This checklist turns the unresolved items in [Owner boards](05-own-boards.md) into concrete collection steps. It does not report new tests. Use the stable names **Board 1** and **Board 2** throughout.
 
+## Current collection status
+
+Board 1 identification photos have been collected and reviewed. The [visual record](08-board1-visual-record.md) closes the descriptive gaps for PCB Rev2.0, coloured header, P4-Core shield marking, C6-MINI-1U family/antenna cable, H5 link and R12/U2 assembly observations. A speaker is visibly connected. Actual voltage/current behaviour and exact component variants remain open. No suitable measurement equipment has been identified; switch/injector model and complete PoE identity are still unknown. Board 2 is deferred at the owner's request.
+
+The photo list below remains a reference for missing markings or future units; it is not a request to repeat the completed Board 1 photographs.
+
 ## 1. Start with identification photos
 
 For each board, collect a sharp full front view, full back view and close-ups of the following areas. Disconnect PoE, USB and powered peripherals before handling or repositioning the board. Keep modules and jumpers in their existing positions. If a marking is hidden, record it as unreadable; do not remove RF shields or soldered parts to obtain a picture.
@@ -63,4 +69,4 @@ P4 revision-3.x operation requires an actual revision-3.x unit. The two document
 
 ## Collection order
 
-Start with **the two sets of photos, the exact switch/injector model, the cable layout and the list of available instruments/accessories**. Review those findings before deciding on electrical tests or firmware changes. For each later result record the board label, date, supply/peripheral configuration, firmware/tool versions, observed result and remaining limits. Preserve the distinction between manufacturer specification, visual identification, software readout and measured behaviour.
+For Board 1, start from the completed [photo review](08-board1-visual-record.md). The next missing information is the exact switch/injector model, actual supply/cable layout and complete PoE identification. Electrical measurements remain open until a suitable method and equipment are available. Board 2 will be handled in a later task. Review the available evidence before deciding on any firmware change or electrical test. For each later result record the board label, date, supply/peripheral configuration, firmware/tool versions, observed result and remaining limits. Preserve the distinction between manufacturer specification, visual identification, software readout and measured behaviour.

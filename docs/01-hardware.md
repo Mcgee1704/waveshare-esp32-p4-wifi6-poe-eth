@@ -10,12 +10,12 @@ Updated 2026-10-30. Source identifiers are resolved in the [register](../sources
 | Sales kits | Basic 32832, C 32833, D 32834; owner accessories not established | WS-MODEL |
 | P4 module | ESP32-P4-Core; schematic U7 ESP32-P4NRW32, current product description ESP32-P4NRW32X | WS-SCHEMATIC, WS-MODEL |
 | Owner silicon revision | Both P4s v1.3; this is separate from PCB revision | OWN-20261029 |
-| PCB revision | Not identified on the physical boards | OWN-20261029 |
+| PCB revision | Board 1: Rev2.0 visible in photographs; Board 2 not visually identified | OWN-PHOTO-20261030-B1 |
 | C6 in the schematic | U1 ESP32-C6-MINI-1-N4 | WS-SCHEMATIC |
 | C6 in the current product description | ESP32-C6-MINI-1U-H8, external antenna | WS-MODEL |
-| Owner C6 / antenna path | Exact module marking and C6 firmware not verified | OWN-20261029 |
+| Owner C6 / antenna path | Board 1: ESP32-C6-MINI-1U marking and attached antenna cable visible; exact memory variant/firmware unresolved. Board 2 unknown | OWN-PHOTO-20261030-B1 |
 
-N4 and H8 must remain separate assembly descriptions. The current sales page does not identify the C6 flash size or antenna variant of the owner boards.
+N4 and H8 must remain separate assembly descriptions. The current sales page does not identify every owner-board variant. Board 1 photographs now identify the MINI-1U family and attached antenna cable, while exact memory suffix/capacity remains unverified.
 
 ## Processing and memory
 
@@ -57,4 +57,4 @@ The current manufacturer drawing specifies **55 × 68 mm**, with mounting-hole c
 
 ## Information still required
 
-PCB markings, header version, P4/C6 module markings, PoE module, R12 population, H5 position, antenna, accessories and permissible current budgets. Unknown values remain `null` in the [board data](../data/board.json). The [evidence checklist](07-evidence-checklist.md) explains what to collect first.
+Board 1 visual identification is recorded in the [photo review](08-board1-visual-record.md): Rev2.0, coloured header, P4-Core shield marking, C6-MINI-1U, antenna cable, 3V3-side H5 link, unpopulated R12 reference footprint, U2 top code P3HE and attached speaker. Exact U2/C6 memory/PoE variants, accessory ratings and current budgets remain open. Unknown measured values remain `null` in the [board data](../data/board.json). Board 2 identification is deferred; the [checklist](07-evidence-checklist.md) retains its open items.

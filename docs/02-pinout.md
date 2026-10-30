@@ -37,7 +37,7 @@ This accounts for 28 different GPIO nets, two 3.3-V contacts, two 5-V contacts a
 
 ## Additional connectors
 
-All numbers are schematic contacts. Mounting/shield contacts numbered 0 are excluded. The manufacturer identifies H1/H2 as SH1.0 and H4 as MX1.25. Physical plug orientation on the owner boards has not been confirmed.
+All numbers are schematic contacts. Mounting/shield contacts numbered 0 are excluded. The manufacturer identifies H1/H2 as SH1.0 and H4 as MX1.25. Physical plug orientation has not been electrically verified. Board 1 photographs identify the coloured header and its row markers; its H5 link is documented in the [visual record](08-board1-visual-record.md). Board 2 is deferred.
 
 | Connector | Schematic contact sequence |
 | --- | --- |

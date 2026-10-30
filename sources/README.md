@@ -17,6 +17,14 @@ Last reviewed **2026-10-30**. Original sources are linked; local review download
 | ESP-ETH | [ESP-IDF 5.5.4 Ethernet](https://docs.espressif.com/projects/esp-idf/en/v5.5.4/esp32p4/api-reference/network/esp_eth.html) | RMII configuration, clock/data roles and PHY drivers |
 | OWN-20261029 | [Published hardware summary at commit 0675f868](https://github.com/Mcgee1704/esp32-p4-llm-cluster-research/blob/0675f8687b9459fafa4545587ef14aedd118187d/docs/HARDWARE.md) | Two owner P4s; local 2026-10-29 bring-up records add startup/readout/backup evidence; raw records remain private |
 
+## Additional Board 1 evidence
+
+| ID | Source | Use / limit |
+| --- | --- | --- |
+| OWN-PHOTO-20261030-B1 | [Sanitized Board 1 visual record](../docs/08-board1-visual-record.md) | 18 owner photographs reviewed on 2026-10-30; originals, private links and hashes retained locally; no electrical test |
+| DIO7003-DS | [DIOO DIO7003 revision-1.4 datasheet](https://www.dioo.com/uploads/product/20210527/39809ef9c4aeae798493447426d5dd7c.pdf) | Page 2 ordering-code/top-marking comparison; W3HE is listed for DIO7003HEST5, while the Board 1 photo is read as P3HE; exact installed part remains open |
+| ESP-C6-MODULE-DS | [Espressif C6-MINI-1/MINI-1U datasheet v1.5](https://documentation.espressif.com/esp32-c6-mini-1_mini-1u_datasheet_en.html) | MINI-1U family has an external antenna connector; family options do not establish the owner module's exact memory variant |
+
 ## Checksums of reviewed manufacturer files
 
 | File / source ID | Bytes | SHA-256 |
@@ -32,8 +40,8 @@ The schematic downloaded on 2026-10-30 exactly matches the previously reviewed l
 
 | Difference | Treatment in this reference |
 | --- | --- |
-| Schematic C6-MINI-1-N4 versus current C6-MINI-1U-H8 description | Preserve both sourced descriptions; owner module remains unknown |
-| P4NRW32 in schematic versus P4NRW32X on product page | Do not assign an unverified package variant to the owner boards |
+| Schematic C6-MINI-1-N4 versus current C6-MINI-1U-H8 description | Preserve both sourced descriptions; Board 1 photo identifies MINI-1U but not its exact memory variant; Board 2 remains unknown |
+| P4NRW32 in schematic versus P4NRW32X on product page | Board 1 P4-Core shield reads ESP32-P4NRW32; retain the product-page difference and do not infer the hidden discrete flash part |
 | 360-MHz board profile versus 400-MHz chip datasheet | Record 360 MHz as the board/experimental setting; 400 MHz is a family specification only |
 | Opposite left/right columns in old/new header pictures | Keep schematic numbering explicit; identify physical pin 1 before wiring |
 | FAQ allows USB-C/PoE together but owner measurements are absent | Separate manufacturer statement from measurements; USB-A power-chain qualification remains open |
