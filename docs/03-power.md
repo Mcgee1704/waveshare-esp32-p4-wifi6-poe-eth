@@ -7,7 +7,7 @@ Updated 2026-10-30. Based on the [schematic](https://files.waveshare.com/wiki/ES
 | Path | Schematic finding | Limit |
 | --- | --- | --- |
 | USB-C | `Type_C_5V` to `VCC_5V` through Q2 AO3401, controlled by U13 MMDT3906DW | Controlled path; reverse-current behaviour not measured for every supply state |
-| USB-A | `VCC_5V` through U2 DIO7003HEST5 to `VBUS_OUT`; R12 shown as parallel NC/0R | Board 1: reference R12 footprint unpopulated in photos, U2 top code P3HE; exact switch/current limit unresolved. Board 2 unknown |
+| USB-A | `VCC_5V` through U2 DIO7003HEST5 to `VBUS_OUT`; R12 shown as parallel NC/0R | Board 1: reference R12 footprint unpopulated in photos, U2 top code P3HE; exact switch/current limit unresolved. Board 2: owner reports no differences, without independent component inspection |
 | PoE | RJ45 centre taps / supply pairs through BD1/BD2 to a separate module; module output feeds `VCC_5V` | Standard, input range, power, isolation and module revision not fully established by this baseboard schematic |
 | 3.3 V | U3 MP1658GTF-Z, marked “3A MAX” in the plan | Not a 3-A USB-A or expansion-header allowance |
 | P4 core | U4 MP1605GTF-Z and P4 internal regulators | Not general-purpose expansion supply outputs |
@@ -30,7 +30,7 @@ The schematic names DIO7003HEST5. The reviewed [DIOO revision-1.4 datasheet, pag
 
 ## H5 and logic levels
 
-H5 is shown as pin 1 = `ESP_3V3`, pin 2 = `OUT_LE`, pin 3 = `VCC_5V`. `OUT_LE` feeds pin 1 of both H1 and H2. Board 1 photographs show a component marked 0 bridging VCC to the 3V3 side, with the 5V selection position unbridged. This is visual evidence of the existing link; actual H1/H2 output voltage has not been measured. Board 2 selection is unknown. Establish the voltage before using a voltage-sensitive accessory; connector shape and wire colour do not establish it. See the [Board 1 visual record](08-board1-visual-record.md).
+H5 is shown as pin 1 = `ESP_3V3`, pin 2 = `OUT_LE`, pin 3 = `VCC_5V`. `OUT_LE` feeds pin 1 of both H1 and H2. Board 1 photographs show a component marked 0 bridging VCC to the 3V3 side, with the 5V selection position unbridged. This is visual evidence of the existing link; actual H1/H2 output voltage has not been measured. The owner reports no differences for Board 2; its H5 link has not been independently inspected or its output measured. See the [Board 2 comparison](09-board2-owner-comparison.md). Establish the voltage before using a voltage-sensitive accessory; connector shape and wire colour do not establish it. See the [Board 1 visual record](08-board1-visual-record.md).
 
 Selecting this supply does **not** change the logic levels of GPIO7/8 or GPIO37/38. They are 3.3-V board signals. Keep 5-V signals away from GPIO inputs. Use appropriate level shifting and a common reference where required, and prevent signal-line back-powering of an unpowered board.
 

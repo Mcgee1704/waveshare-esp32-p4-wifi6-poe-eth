@@ -310,7 +310,25 @@
       "flash_encryption_at_readout": false,
       "original_flash_backed_up_privately": true,
       "restore_tested": false,
-      "source_id": "OWN-20261029"
+      "source_id": "OWN-20261029",
+      "owner_comparison": {
+        "date": "2026-10-30",
+        "source_id": "OWN-REPORT-20261030-B2",
+        "reference_board": "board-1",
+        "reference_source_id": "OWN-PHOTO-20261030-B1",
+        "statement": "Owner reports no differences between Board 2 and Board 1.",
+        "evidence_type": "general owner statement; no independent Board 2 photo review or per-component marking transcription",
+        "independent_assembly_verification": false,
+        "independent_photo_review": false,
+        "new_device_access": false,
+        "new_functional_or_electrical_tests": false,
+        "documentation_status": "descriptive record complete with attributed owner report",
+        "remaining_limits": "Independent Board 2 assembly verification and unresolved component, electrical, peripheral and recovery questions remain open."
+      },
+      "source_ids": [
+        "OWN-20261029",
+        "OWN-REPORT-20261030-B2"
+      ]
     }
   ],
   "documentation_session": {
@@ -331,6 +349,7 @@
     "OWN-20261029",
     "OWN-PHOTO-20261030-B1",
     "DIO7003-DS",
-    "ESP-C6-MODULE-DS"
+    "ESP-C6-MODULE-DS",
+    "OWN-REPORT-20261030-B2"
   ]
 }

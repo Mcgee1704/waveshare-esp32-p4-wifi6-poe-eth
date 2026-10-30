@@ -10,10 +10,10 @@ Updated 2026-10-30. Source identifiers are resolved in the [register](../sources
 | Sales kits | Basic 32832, C 32833, D 32834; owner accessories not established | WS-MODEL |
 | P4 module | ESP32-P4-Core; schematic U7 ESP32-P4NRW32, current product description ESP32-P4NRW32X | WS-SCHEMATIC, WS-MODEL |
 | Owner silicon revision | Both P4s v1.3; this is separate from PCB revision | OWN-20261029 |
-| PCB revision | Board 1: Rev2.0 visible in photographs; Board 2 not visually identified | OWN-PHOTO-20261030-B1 |
+| PCB revision | Board 1: Rev2.0 visible in photographs; Board 2: owner reports no differences, without independent revision reading | OWN-PHOTO-20261030-B1, OWN-REPORT-20261030-B2 |
 | C6 in the schematic | U1 ESP32-C6-MINI-1-N4 | WS-SCHEMATIC |
 | C6 in the current product description | ESP32-C6-MINI-1U-H8, external antenna | WS-MODEL |
-| Owner C6 / antenna path | Board 1: ESP32-C6-MINI-1U marking and attached antenna cable visible; exact memory variant/firmware unresolved. Board 2 unknown | OWN-PHOTO-20261030-B1 |
+| Owner C6 / antenna path | Board 1: ESP32-C6-MINI-1U marking and attached antenna cable visible; exact memory variant/firmware unresolved. Board 2: owner reports no differences; no independent module reading | OWN-PHOTO-20261030-B1, OWN-REPORT-20261030-B2 |
 
 N4 and H8 must remain separate assembly descriptions. The current sales page does not identify every owner-board variant. Board 1 photographs now identify the MINI-1U family and attached antenna cable, while exact memory suffix/capacity remains unverified.
 
@@ -57,4 +57,4 @@ The current manufacturer drawing specifies **55 × 68 mm**, with mounting-hole c
 
 ## Information still required
 
-Board 1 visual identification is recorded in the [photo review](08-board1-visual-record.md): Rev2.0, coloured header, P4-Core shield marking, C6-MINI-1U, antenna cable, 3V3-side H5 link, unpopulated R12 reference footprint, U2 top code P3HE and attached speaker. Exact U2/C6 memory/PoE variants, accessory ratings and current budgets remain open. Unknown measured values remain `null` in the [board data](../data/board.json). Board 2 identification is deferred; the [checklist](07-evidence-checklist.md) retains its open items.
+Board 1 visual identification is recorded in the [photo review](08-board1-visual-record.md): Rev2.0, coloured header, P4-Core shield marking, C6-MINI-1U, antenna cable, 3V3-side H5 link, unpopulated R12 reference footprint, U2 top code P3HE and attached speaker. Exact U2/C6 memory/PoE variants, accessory ratings and current budgets remain open. Unknown measured values remain `null` in the [board data](../data/board.json). The [Board 2 record](09-board2-owner-comparison.md) now records the owner's no-difference comparison separately from independent identification. The [checklist](07-evidence-checklist.md) retains unresolved verification and measurement items.

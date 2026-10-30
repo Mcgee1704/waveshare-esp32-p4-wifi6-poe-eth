@@ -25,6 +25,12 @@ Last reviewed **2026-10-30**. Original sources are linked; local review download
 | DIO7003-DS | [DIOO DIO7003 revision-1.4 datasheet](https://www.dioo.com/uploads/product/20210527/39809ef9c4aeae798493447426d5dd7c.pdf) | Page 2 ordering-code/top-marking comparison; W3HE is listed for DIO7003HEST5, while the Board 1 photo is read as P3HE; exact installed part remains open |
 | ESP-C6-MODULE-DS | [Espressif C6-MINI-1/MINI-1U datasheet v1.5](https://documentation.espressif.com/esp32-c6-mini-1_mini-1u_datasheet_en.html) | MINI-1U family has an external antenna connector; family options do not establish the owner module's exact memory variant |
 
+## Additional Board 2 evidence
+
+| ID | Source | Use / limit |
+| --- | --- | --- |
+| OWN-REPORT-20261030-B2 | [Sanitized Board 2 owner comparison](../docs/09-board2-owner-comparison.md) | Owner statement on 2026-10-30: no differences from Board 1; no independent Board 2 photo review, marking readout or new test. Existing photos remain Board 1 evidence |
+
 ## Checksums of reviewed manufacturer files
 
 | File / source ID | Bytes | SHA-256 |
@@ -40,7 +46,7 @@ The schematic downloaded on 2026-10-30 exactly matches the previously reviewed l
 
 | Difference | Treatment in this reference |
 | --- | --- |
-| Schematic C6-MINI-1-N4 versus current C6-MINI-1U-H8 description | Preserve both sourced descriptions; Board 1 photo identifies MINI-1U but not its exact memory variant; Board 2 remains unknown |
+| Schematic C6-MINI-1-N4 versus current C6-MINI-1U-H8 description | Preserve both sourced descriptions; Board 1 photo identifies MINI-1U but not its exact memory variant; Board 2 owner reports no differences, without independent variant identification |
 | P4NRW32 in schematic versus P4NRW32X on product page | Board 1 P4-Core shield reads ESP32-P4NRW32; retain the product-page difference and do not infer the hidden discrete flash part |
 | 360-MHz board profile versus 400-MHz chip datasheet | Record 360 MHz as the board/experimental setting; 400 MHz is a family specification only |
 | Opposite left/right columns in old/new header pictures | Keep schematic numbering explicit; identify physical pin 1 before wiring |

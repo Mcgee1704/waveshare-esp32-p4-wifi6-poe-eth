@@ -10,6 +10,7 @@ Technical reference for the P4 board with Ethernet, a PoE module interface and a
 | USB, boot mode, chip revision and ESP-IDF configuration | [Programming](docs/04-firmware.md) |
 | Existing evidence and unresolved items for both owner boards | [Owner boards](docs/05-own-boards.md) |
 | Board 1 PCB/module identification and H5/R12/U2 photo findings | [Board 1 visual record](docs/08-board1-visual-record.md) |
+| Board 2 owner comparison and remaining verification limits | [Board 2 record](docs/09-board2-owner-comparison.md) |
 | Manufacturer examples, ESP-Hosted, KVM and cluster research | [Git projects](docs/06-git-projects.md) |
 | Photos, equipment information and tests needed to resolve open items | [Evidence checklist](docs/07-evidence-checklist.md) |
 | Sources, checksums and conflicting descriptions | [Source register](sources/README.md) |
@@ -33,7 +34,7 @@ References: [Waveshare overview](https://docs.waveshare.com/ESP32-P4-WIFI6-POE-E
 
 H1/H2 use the H5-selectable supply `OUT_LE`; their signal levels remain 3.3 V. The manufacturer FAQ allows USB-C and PoE together. A multi-board USB-A-to-USB-C power chain has no established current budget. [Details](docs/03-power.md).
 
-Existing functional results used USB-C power and Ethernet **without PoE**. They do not establish operation of WLAN/BLE, audio, camera, display or SD. The [Board 1 photo review](docs/08-board1-visual-record.md) identifies PCB Rev2.0, a coloured header and an ESP32-C6-MINI-1U with an antenna cable, plus the visible H5/R12/U2 assembly. Exact component variants and electrical behaviour remain open. Board 2 is deferred; the [checklist](docs/07-evidence-checklist.md) records the remaining work.
+Existing functional results used USB-C power and Ethernet **without PoE**. They do not establish operation of WLAN/BLE, audio, camera, display or SD. The [Board 1 photo review](docs/08-board1-visual-record.md) identifies PCB Rev2.0, a coloured header and an ESP32-C6-MINI-1U with an antenna cable, plus the visible H5/R12/U2 assembly. Exact component variants and electrical behaviour remain open. The owner now reports no differences between Board 2 and Board 1; the [Board 2 record](docs/09-board2-owner-comparison.md) attributes that comparison without claiming an independent photo review. The [checklist](docs/07-evidence-checklist.md) records the remaining work.
 
 This repository contains independent technical notes and source references. It is not an official Waveshare publication. Original PDFs, manufacturer images, private flash backups and raw device logs are kept separately. [Publication scope and rights](PUBLICATION.md).
 

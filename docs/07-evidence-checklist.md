@@ -4,13 +4,13 @@ Prepared 2026-10-30. This checklist turns the unresolved items in [Owner boards]
 
 ## Current collection status
 
-Board 1 identification photos have been collected and reviewed. The [visual record](08-board1-visual-record.md) closes the descriptive gaps for PCB Rev2.0, coloured header, P4-Core shield marking, C6-MINI-1U family/antenna cable, H5 link and R12/U2 assembly observations. A speaker is visibly connected. Actual voltage/current behaviour and exact component variants remain open. No suitable measurement equipment has been identified; switch/injector model and complete PoE identity are still unknown. Board 2 is deferred at the owner's request.
+Board 1 identification photos have been collected and reviewed. The [visual record](08-board1-visual-record.md) closes the descriptive gaps for PCB Rev2.0, coloured header, P4-Core shield marking, C6-MINI-1U family/antenna cable, H5 link and R12/U2 assembly observations. A speaker is visibly connected. Actual voltage/current behaviour and exact component variants remain open. No suitable measurement equipment has been identified; switch/injector model and complete PoE identity are still unknown. The owner has reopened Board 2 documentation and reports no differences from Board 1. Its [descriptive record](09-board2-owner-comparison.md) is complete with that attribution; independent Board 2 assembly inspection remains unperformed.
 
-The photo list below remains a reference for missing markings or future units; it is not a request to repeat the completed Board 1 photographs.
+The photo list below remains a reference for missing markings or future units; it is not a request to repeat the completed Board 1 photographs or to supply a second set merely to record the Board 2 owner comparison.
 
 ## 1. Start with identification photos
 
-For each board, collect a sharp full front view, full back view and close-ups of the following areas. Disconnect PoE, USB and powered peripherals before handling or repositioning the board. Keep modules and jumpers in their existing positions. If a marking is hidden, record it as unreadable; do not remove RF shields or soldered parts to obtain a picture.
+If independent identification is needed for a future question, collect a sharp full front view, full back view and relevant close-ups. The following list describes what those images can establish. Disconnect PoE, USB and powered peripherals before handling or repositioning the board. Keep modules and jumpers in their existing positions. If a marking is hidden, record it as unreadable; do not remove RF shields or soldered parts to obtain a picture.
 
 | Photo / information | Must be visible | Gap it can help resolve |
 | --- | --- | --- |
@@ -69,4 +69,4 @@ P4 revision-3.x operation requires an actual revision-3.x unit. The two document
 
 ## Collection order
 
-For Board 1, start from the completed [photo review](08-board1-visual-record.md). The next missing information is the exact switch/injector model, actual supply/cable layout and complete PoE identification. Electrical measurements remain open until a suitable method and equipment are available. Board 2 will be handled in a later task. Review the available evidence before deciding on any firmware change or electrical test. For each later result record the board label, date, supply/peripheral configuration, firmware/tool versions, observed result and remaining limits. Preserve the distinction between manufacturer specification, visual identification, software readout and measured behaviour.
+For Board 1, start from the completed [photo review](08-board1-visual-record.md). The next missing information is the exact switch/injector model, actual supply/cable layout and complete PoE identification. Electrical measurements remain open until a suitable method and equipment are available. Board 2's owner comparison is now recorded; no extra photo collection is requested for that descriptive entry. Independent inspection is a separate follow-up if a future question requires it. Review the available evidence before deciding on any firmware change or electrical test. For each later result record the board label, date, supply/peripheral configuration, firmware/tool versions, observed result and remaining limits. Preserve the distinction between manufacturer specification, owner report, visual identification, software readout and measured behaviour.

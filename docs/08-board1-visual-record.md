@@ -53,6 +53,6 @@ The descriptive record now identifies the PCB revision, coloured header, P4-Core
 - Exact C6 memory variant/readout, installed C6 firmware and wireless function.
 - Exact P4 flash component, accessory ratings, peripheral function, complete GPIO coverage, long-duration operation and recovery tests.
 
-No reset, firmware installation, component/jumper change, voltage/current/continuity measurement or new functional test was performed. No RF shield or soldered part needs to be removed to complete this descriptive record. Board 2 is deferred at the owner's request; these observations apply only to Board 1.
+No reset, firmware installation, component/jumper change, voltage/current/continuity measurement or new functional test was performed. No RF shield or soldered part needs to be removed to complete this descriptive record. Board 2 was deferred during this photo review; its subsequent [owner comparison](09-board2-owner-comparison.md) is recorded separately. No independent Board 2 photo review was performed; these observations apply only to Board 1.
 
 [Remaining evidence checklist](07-evidence-checklist.md) · [Source register](../sources/README.md)
